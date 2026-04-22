@@ -1,0 +1,3190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs for Nicole Buchan — Curated Match Report</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f7fa;
+    color: #1a202c;
+    line-height: 1.55;
+    padding: 0 20px 80px;
+  }
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    margin: 0 -20px 28px;
+    padding: 14px 20px 12px;
+  }
+  .sticky-nav-inner { max-width: 860px; margin: 0 auto; }
+  .nav-title { font-size: 19px; font-weight: 700; color: #1a365d; }
+  .nav-title small { display: inline-block; margin-left: 10px; font-size: 12px; color: #718096; font-weight: 500; }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+    align-items: center;
+  }
+  .tag-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    padding: 4px 9px;
+    border-radius: 12px;
+    margin-right: 4px;
+  }
+  .tag-label-strong { background: #dcfce7; color: #166534; }
+  .tag-label-stretch { background: #fef3c7; color: #92400e; }
+  .tag {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .tag:hover { text-decoration: none; }
+
+  /* Color-code tags by tier so the row identity is obvious at a glance */
+  .tag-strong { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
+  .tag-strong:hover { background: #dcfce7; border-color: #22c55e; color: #166534; }
+  .tag-stretch { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+  .tag-stretch:hover { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
+
+  /* Row-level visual grouping */
+  .tag-row-strong {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.09), rgba(34, 197, 94, 0.01));
+    padding: 7px 12px 7px 14px;
+    border-radius: 10px;
+    border-left: 3px solid #22c55e;
+  }
+  .tag-row-stretch {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.09), rgba(245, 158, 11, 0.01));
+    padding: 7px 12px 7px 14px;
+    border-radius: 10px;
+    border-left: 3px solid #f59e0b;
+  }
+  .tag-label-strong { background: #22c55e; color: #fff; }
+  .tag-label-stretch { background: #f59e0b; color: #fff; }
+  .card { scroll-margin-top: 170px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .tier-header {
+    margin: 40px 0 20px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .tier-apply { background: #dcfce7; color: #166534; border-left: 5px solid #22c55e; }
+  .tier-stretch { background: #fef3c7; color: #92400e; border-left: 5px solid #f59e0b; }
+  .tier-apply + .card { margin-top: 0; }
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .card-header {
+    background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%);
+    color: #fff;
+    padding: 22px 26px 20px;
+  }
+  .card-header.stretch { background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%); }
+  .fit-badge {
+    display: inline-block;
+    background: #22c55e;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 14px;
+    margin-bottom: 0;
+  }
+  .card-header.stretch .fit-badge { background: #f59e0b; }
+  .card-header h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
+  .card-header .company { font-size: 14px; opacity: 0.92; }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 14px 26px;
+    background: #f7fafc;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+    color: #4a5568;
+  }
+  .meta-item strong { color: #1a202c; }
+  details.section {
+    border-bottom: 1px solid #edf2f7;
+  }
+  details.section[open] summary::after { transform: rotate(180deg); }
+  details.section summary {
+    list-style: none;
+    padding: 16px 26px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  details.section summary::-webkit-details-marker { display: none; }
+  details.section summary::after {
+    content: "⌄";
+    font-size: 18px;
+    transition: transform 0.2s;
+  }
+  .section-fit summary { background: linear-gradient(90deg, #f0fdf4, transparent); color: #166534; border-left: 4px solid #22c55e; }
+  .section-gaps summary { background: linear-gradient(90deg, #faf5ff, transparent); color: #6b21a8; border-left: 4px solid #a855f7; }
+  .section-next summary { background: linear-gradient(90deg, #eff6ff, transparent); color: #1e40af; border-left: 4px solid #3b82f6; }
+  .section-body { padding: 18px 26px 24px; }
+  .bullet-list { list-style: none; padding: 0; }
+  .bullet-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    color: #2d3748;
+  }
+  .bullet-list li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+  }
+  .section-fit .bullet-list li::before { content: "✓"; color: #16a34a; }
+  .section-gaps .bullet-list li::before { content: "!"; color: #9333ea; }
+  .tabs { }
+  .tab-bar {
+    display: flex;
+    gap: 2px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 18px;
+    overflow-x: auto;
+  }
+  .tab-label {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    white-space: nowrap;
+    transition: color 0.15s;
+  }
+  .tab-label:hover { color: #1e40af; }
+  .tab-label.active { color: #1e40af; border-bottom-color: #1e40af; }
+  .tab-content { display: none; font-size: 14.5px; color: #2d3748; }
+  .tab-content.active { display: block; }
+  .tab-content h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e40af;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .tab-content p { margin-bottom: 10px; }
+  .tab-content ol { padding-left: 22px; margin-bottom: 12px; }
+  .tab-content ol li { margin-bottom: 8px; }
+  .tab-content ul { padding-left: 22px; margin-bottom: 12px; }
+  .tab-content ul li { margin-bottom: 6px; }
+  .tab-content a { color: #2563eb; text-decoration: none; font-weight: 500; }
+  .tab-content a:hover { text-decoration: underline; }
+  .actions {
+    padding: 20px 26px 24px;
+    background: #f7fafc;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn-primary { background: #6d28d9; color: #fff; }
+  .btn-primary:hover { background: #5b21b6; }
+  .btn-secondary { background: #fff; color: #6d28d9; border: 1.5px solid #cbd5e0; }
+  .btn-secondary:hover { border-color: #6d28d9; }
+
+  /* Hide the detail sections inside cards — content is now in modal popovers */
+  .card > .section-jd,
+  .card > .section-company,
+  .card > .section-news { display: none !important; }
+
+  /* Card header — fit badge at top-left, title/company stack directly under it; apply stack floats top-right */
+  .card-header {
+    position: relative;
+    padding: 14px 22px 16px !important;
+    padding-right: 190px !important;
+  }
+  .fit-badge { margin-bottom: 8px !important; }
+  .card-header h2 { font-size: 20px; margin: 0 0 4px 0; line-height: 1.25; }
+  .card-header .company { padding: 0; font-size: 14px; }
+  .company-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .apply-stack {
+    position: absolute;
+    top: 14px;
+    right: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+    width: 158px;
+  }
+  /* Old news wrap no longer used — news tag moved inline with company */
+  .card-news-wrap { display: none; }
+  .apply-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .apply-tag:hover {
+    background: rgba(255,255,255,0.32);
+    color: #fff;
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .apply-tag svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
+  .fav-btn {
+    background: rgba(255,255,255,0.22);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.92);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+    padding: 0;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* Company News tag under company name */
+  .card-news-wrap { margin-top: 10px; }
+  .card-news-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.22);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .card-news-tag:hover {
+    background: rgba(255,255,255,0.32);
+    transform: translateY(-1px);
+  }
+
+  /* Hide bottom card actions — apply buttons are now in the header */
+  .card > .actions { display: none; }
+  .fav-btn:hover { background: rgba(255,255,255,0.35); color: #fff; transform: scale(1.08); }
+  .fav-btn.starred { background: #fbbf24; color: #78350f; border-color: #fbbf24; }
+  .fav-btn.starred:hover { background: #f59e0b; }
+  /* Tooltip for the star */
+  .fav-btn::before {
+    content: "Click to favorite this position";
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #1f2937;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+    z-index: 50;
+  }
+  .fav-btn:hover::before { opacity: 1; }
+  .fav-btn.starred::before { content: "Starred — click to unfavorite"; }
+
+  /* Modal popovers for Job Description / Company Info / News */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 200;
+    padding: 40px 20px;
+    backdrop-filter: blur(3px);
+    overflow-y: auto;
+  }
+  .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal-content {
+    background: #fff;
+    border-radius: 14px;
+    max-width: 740px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: modalIn 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+    position: relative;
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.97) translateY(12px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .modal-header {
+    padding: 22px 58px 18px 26px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-radius: 14px 14px 0 0;
+    z-index: 5;
+  }
+  .modal-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    margin-bottom: 4px;
+  }
+  .modal-title { font-size: 19px; font-weight: 700; color: #1a202c; margin-bottom: 2px; line-height: 1.3; }
+  .modal-subtitle { font-size: 13px; color: #6b7280; }
+  .modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: #1f2937;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    padding: 0 0 2px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    z-index: 10;
+  }
+  .modal-close:hover { background: #6d28d9; transform: scale(1.08); }
+  .modal-body { padding: 20px 26px 28px; }
+  .modal-body h5 {
+    font-size: 12px; font-weight: 800; color: #0c4a6e;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    margin: 18px 0 8px; padding-bottom: 4px;
+    border-bottom: 1px solid #e0f2fe;
+  }
+  .modal-body h5:first-child { margin-top: 0; }
+  .modal-body p { font-size: 14.5px; margin-bottom: 10px; color: #2d3748; line-height: 1.6; }
+  .modal-body ul { padding-left: 20px; margin-bottom: 12px; }
+  .modal-body ul li { margin-bottom: 6px; font-size: 14.5px; color: #2d3748; line-height: 1.55; }
+  .modal-body a { color: #2563eb; text-decoration: none; font-weight: 500; }
+  .modal-body a:hover { text-decoration: underline; }
+  .modal-body .news-list { list-style: none; padding: 0; }
+  .modal-body .news-list li { padding: 12px 14px; background: #f9fafb; border-radius: 6px; margin-bottom: 10px; border-left: 3px solid #ec4899; }
+  .modal-body .news-list li a { font-weight: 600; font-size: 14px; }
+  .modal-body .news-list li .note { display: block; font-size: 12px; color: #6b7280; margin-top: 2px; font-weight: 400; }
+
+  body.show-favorites-only .card:not(.is-favorite) { display: none; }
+  body.show-favorites-only .tier-header { opacity: 0.45; }
+  .tag-fav {
+    background: #fef3c7; color: #78350f;
+    border-color: #fbbf24; font-weight: 700; cursor: pointer;
+  }
+  .tag-fav.active { background: #fbbf24; color: #78350f; box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.3); }
+  .tag-fav:hover { background: #fcd34d; color: #78350f; }
+  .fav-hint { font-size: 11px; color: #9ca3af; margin-left: 6px; }
+
+  .section-jd summary { background: linear-gradient(90deg, #f0f9ff, transparent); color: #0c4a6e; border-left: 4px solid #0ea5e9; }
+  .section-company summary { background: linear-gradient(90deg, #fffbeb, transparent); color: #92400e; border-left: 4px solid #f59e0b; }
+  .section-news summary { background: linear-gradient(90deg, #fdf2f8, transparent); color: #831843; border-left: 4px solid #ec4899; }
+
+  .jd-content h5 {
+    font-size: 12px; font-weight: 800; color: #0c4a6e;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    margin: 16px 0 8px; padding-bottom: 4px;
+    border-bottom: 1px solid #e0f2fe;
+  }
+  .jd-content h5:first-child { margin-top: 0; }
+  .jd-content p { font-size: 14px; margin-bottom: 10px; color: #2d3748; }
+  .jd-content ul { padding-left: 20px; margin-bottom: 12px; }
+  .jd-content ul li { margin-bottom: 4px; font-size: 14px; color: #2d3748; }
+  .company-content p { font-size: 14px; margin-bottom: 10px; color: #2d3748; }
+  .company-content ul { padding-left: 20px; margin-bottom: 10px; }
+  .company-content ul li { font-size: 14px; margin-bottom: 4px; color: #2d3748; }
+  .news-list { list-style: none; padding: 0; }
+  .news-list li { padding: 10px 12px; background: #f9fafb; border-radius: 6px; margin-bottom: 8px; }
+  .news-list li a { color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; }
+  .news-list li a:hover { text-decoration: underline; }
+  .news-list li .note { display: block; font-size: 12px; color: #6b7280; margin-top: 2px; font-weight: 400; }
+
+  /* Clickable title and company — stacked, with › indicator */
+  .card-header h2 {
+    cursor: pointer;
+    display: block;
+    transition: opacity 0.15s;
+  }
+  .card-header h2::after {
+    content: " ›";
+    display: inline-block;
+    margin-left: 8px;
+    opacity: 0.6;
+    font-weight: 400;
+    transition: transform 0.2s, opacity 0.15s;
+  }
+  .card-header h2:hover { opacity: 0.92; }
+  .card-header h2:hover::after { opacity: 1; transform: translateX(4px); }
+
+  .card-header .company {
+    cursor: pointer;
+    display: block;
+    padding: 2px 0;
+    transition: opacity 0.15s;
+  }
+  .card-header .company::after {
+    content: " ›";
+    display: inline-block;
+    margin-left: 6px;
+    opacity: 0.6;
+    font-size: 0.9em;
+    transition: transform 0.2s, opacity 0.15s;
+  }
+  .card-header .company:hover { opacity: 0.92; }
+  .card-header .company:hover::after { opacity: 1; transform: translateX(4px); }
+
+  /* Nav header row with Apply button */
+  .nav-header-row { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+  .apply-btn-header {
+    background: #16a34a;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.28);
+    transition: all 0.15s;
+  }
+  .apply-btn-header:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+  }
+
+  /* News tag */
+  .tag-news {
+    background: #fce7f3;
+    color: #831843;
+    border-color: #f9a8d4;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .tag-news:hover { background: #fbcfe8; color: #831843; }
+
+  /* Carousel mode */
+  .tier-header { display: none; }
+  .card { display: none; }
+  .card.active { display: block; animation: cardSlideIn 0.32s cubic-bezier(0.22, 0.61, 0.36, 1); }
+  .card.active.slide-from-left { animation: cardSlideFromLeft 0.32s cubic-bezier(0.22, 0.61, 0.36, 1); }
+  @keyframes cardSlideIn {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes cardSlideFromLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .carousel-nav {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 40px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18), 0 2px 6px rgba(0,0,0,0.06);
+    z-index: 95;
+  }
+  .nav-arrow {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: #6d28d9;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    padding-bottom: 3px;
+  }
+  .nav-arrow:hover { background: #5b21b6; transform: scale(1.06); }
+  .nav-arrow:active { transform: scale(0.98); }
+  .card-counter {
+    min-width: 90px;
+    text-align: center;
+  }
+  .card-counter .counter-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 1.2;
+  }
+  .card-counter .tier-indicator {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+  }
+  .card-counter .tier-indicator.strong { color: #16a34a; }
+  .card-counter .tier-indicator.stretch { color: #d97706; }
+
+  .kbd-hint {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #9ca3af;
+    z-index: 94;
+    background: rgba(255,255,255,0.85);
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  /* Body padding to prevent last section from hiding behind nav */
+  body { padding-bottom: 140px; }
+
+  /* Empty state when no favorites match */
+  .empty-state {
+    display: none;
+    text-align: center;
+    padding: 80px 20px;
+    color: #6b7280;
+  }
+  .empty-state.show { display: block; }
+  .empty-state h3 { font-size: 20px; color: #1a202c; margin-bottom: 8px; }
+  .empty-state p { font-size: 14px; margin-bottom: 16px; }
+  .empty-state .btn-back {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #6d28d9;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+  }
+</style>
+</head>
+<body>
+<div class="sticky-nav">
+  <div class="sticky-nav-inner">
+    <div class="nav-title">Jobs for Nicole Buchan <small>13 curated roles · FL &amp; remote · Prepared April 2026</small></div>
+    <div class="tag-row tag-row-strong">
+      <span class="tag-label tag-label-strong">Strong Fit</span>
+      <a class="tag tag-strong" href="#echelon">Echelon</a>
+      <a class="tag tag-strong" href="#tu-local">TU: Local Media</a>
+      <a class="tag tag-strong" href="#tu-streaming">TU: Streaming</a>
+      <a class="tag tag-strong" href="#prep-network">Prep Network</a>
+      <a class="tag tag-strong" href="#enterprise">Enterprise</a>
+      <a class="tag tag-strong" href="#sponsor-united">SponsorUnited</a>
+    </div>
+    <div class="tag-row tag-row-stretch">
+      <span class="tag-label tag-label-stretch">Stretch</span>
+      <a class="tag tag-stretch" href="#van-wagner">Van Wagner</a>
+      <a class="tag tag-stretch" href="#miami-foundation">Miami Foundation</a>
+      <a class="tag tag-stretch" href="#coke-florida">Coke Florida</a>
+      <a class="tag tag-stretch" href="#miami-realtors">MIAMI Realtors</a>
+      <a class="tag tag-stretch" href="#jazwares">Jazwares</a>
+      <a class="tag tag-stretch" href="#bestlogic">BestLogic</a>
+      <a class="tag tag-stretch" href="#fanatics">Fanatics</a>
+    </div>
+    <div class="tag-row">
+      <a class="tag tag-fav" id="favorites-tag" onclick="toggleFavFilter()">★ My Favorites (0)</a>
+      <span class="fav-hint">Click a company name to see info · Click the job title to see the full description</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="tier-header tier-apply">★ Apply This Week (6 roles — your resume already qualifies)</div>
+
+<!-- CARD 2: Echelon -->
+<div class="card" id="echelon">
+  <div class="card-header">
+    <span class="fit-badge">Strong Fit · Remote</span>
+    <button class="fav-btn" data-fav="echelon" onclick="toggleFav('echelon', this)" aria-label="Favorite">★</button>
+    <h2>Coordinator, B2B Sponsorships</h2>
+    <div class="company">Echelon</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Remote</strong></div>
+    <div class="meta-item">💰 <strong>Not disclosed</strong></div>
+    <div class="meta-item">🎓 Bachelor's in marketing/sports management</div>
+    <div class="meta-item">⏳ 1–2 yrs experience</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Multimedia Journalism + Sports minor maps to their "marketing/sports management" preference.</strong></li>
+        <li><strong>Their three core values are your brand.</strong> "Detailed urgency" (captain mentality), "client obsession" (Orangetheory sales), "inventive experiences" (event coordination).</li>
+        <li><strong>Athletic background.</strong> They explicitly want "genuine interest in sports, entertainment, media, or brand marketing." You have it documented across four years of competitive play and two ambassadorships.</li>
+        <li><strong>Entry-friendly.</strong> 1–2 years experience — your internships, captain role, and camp counselor work stack to meet this.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>No PowerPoint/Canva portfolio on resume.</strong> They explicitly list "proficiency in presentation tools" as required. You likely have class deck samples — make one public.</li>
+        <li><strong>No Monday.com exposure listed.</strong> Free for students. Spend one evening inside it before applying — <a href="https://monday.com/pricing/education" target="_blank">Monday.com education access</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c2','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c2','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c2','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c2','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c2','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c2-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Add a one-line portfolio link at the top (next to your email). If you don't have one yet, build a free Notion page with 3–4 class presentations. Template: <a href="https://www.notion.com/templates/portfolio-template-2" target="_blank">Notion portfolio template</a>.</li>
+            <li>Change your Sport Business Association bullet to lead with ACTION: "Research sponsorship deals and attend industry speaker events; contribute insights to peer group of 40+ sports business students."</li>
+            <li>Add to skills section: <em>PowerPoint, Excel, Canva, Monday.com</em>.</li>
+            <li>Add a "Sports Industry Interest" line below education: "Active study of sponsorship activations across MLS, WNBA, and collegiate NIL deals via Sports Business Journal and Front Office Sports."</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c2-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Echelon employees on LinkedIn: <a href="https://www.linkedin.com/search/results/people/?keywords=echelon%20sports%20sponsorship" target="_blank">LinkedIn → Echelon sports sponsorship</a></li>
+            <li>Their subsidiary Best.Day.Ever. team: search "Best.Day.Ever." on LinkedIn for current staff.</li>
+            <li>Sports sponsorship professionals in South Florida: <a href="https://www.linkedin.com/search/results/people/?keywords=sponsorship%20manager%20miami" target="_blank">LinkedIn → sponsorship managers in Miami</a></li>
+          </ul>
+          <p>Send 5 connection requests this week with one sentence: "Hi [name], I'm a communications senior at FAU exploring a career in sports sponsorship — would appreciate any advice as I'm just starting out."</p>
+        </div>
+
+        <div class="tab-content" id="c2-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://www.sponsorunited.com/resources" target="_blank">SponsorUnited Resource Hub</a> — industry reports on who is sponsoring what. Read their most recent "State of Sports Sponsorship" report.</li>
+            <li><a href="https://frontofficesports.com/tag/sponsorship/" target="_blank">Front Office Sports — Sponsorship coverage</a>. Their daily newsletter is free and essential.</li>
+            <li><a href="https://www.sportsbusinessjournal.com/sections/sponsorships-advertising-marketing" target="_blank">Sports Business Journal — Sponsorships section</a>.</li>
+            <li><a href="https://www.linkedin.com/company/echelon-talent-management" target="_blank">Echelon's LinkedIn company page</a> — read their last 10 posts to understand their voice and recent wins.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c2-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A detail-driven communications senior who has coordinated sports programs from the inside and studies sponsorship from the outside — ready to execute with precision from day one."</strong></p>
+          <p>Echelon's culture rewards execution. In your cover letter, mention their "detailed urgency" value by name. Give one example of a deadline you hit under pressure (championship game logistics, event day execution, a coursework deadline).</p>
+        </div>
+
+        <div class="tab-content" id="c2-interview">
+          <h4>Interview prep</h4>
+          <p>Bring a 1-page "activation concept" as a thought exercise — they'll respect the initiative. Pick a brand (e.g., LaCroix) and a property (e.g., WNBA) and write a one-page sponsorship activation idea. Use their subsidiary Best.Day.Ever. as a model for experiential thinking.</p>
+          <ol>
+            <li>"Walk me through a sponsorship activation you've admired recently." → Pick something specific from the last 90 days. Example: State Farm's WNBA courtside brand presence.</li>
+            <li>"How do you manage competing deadlines?" → Lacrosse captain story.</li>
+            <li>"Why sponsorship over agency/brand-side?" → Connect to your preference for cross-functional work.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Overview</h5>
+      <p>Echelon supercharges sales, storytelling, sponsorship, and strategy for some of the most prominent names in sports and entertainment. Work spans brand consulting, property solutions, research and measurement, experiential marketing, and ticket management. Through its experiential subsidiary, Best.Day.Ever., Echelon produces everything from bespoke client experiences to large-scale national conferences.</p>
+      <h5>Core Values</h5>
+      <ul>
+        <li><strong>Detailed Urgency</strong> — Efficient timelines drive accountability</li>
+        <li><strong>Client Obsession</strong> — Understand every client win. Deliver against it.</li>
+        <li><strong>Inventive Experiences</strong> — Curiosity and creativity in every deliverable.</li>
+      </ul>
+      <h5>The Role</h5>
+      <p>Echelon is seeking a Coordinator, B2B Sponsorships to support the execution of high-impact sponsorship and hospitality programs. Ideal for someone early in their career who thrives in a fast-paced environment, is highly organized, and has a passion for sports, entertainment, and brand marketing.</p>
+      <h5>Key Responsibilities</h5>
+      <ul>
+        <li>Support day-to-day execution of sponsorship and hospitality programs across multiple clients</li>
+        <li>Assist in the development of presentations, recap reports, and client-facing materials</li>
+        <li>Coordinate logistics for events, ticketing, and experiential activations</li>
+        <li>Manage timelines, trackers, and internal workflows to ensure deadlines are met</li>
+        <li>Draft and edit written communications</li>
+        <li>Collaborate cross-functionally with internal teams and external partners</li>
+        <li>Contribute to post-event reporting and measurement efforts</li>
+      </ul>
+      <h5>Qualifications</h5>
+      <ul>
+        <li>1–2 years of relevant professional experience</li>
+        <li>Bachelor's degree in marketing, sports management, business, or a related field</li>
+        <li>Strong writing skills</li>
+        <li>Proficiency in Microsoft Excel and presentation tools like PowerPoint and Canva</li>
+        <li>Comfort with project management tools such as Monday.com</li>
+        <li>Ability to work on weekends, nights, and holidays dictated by the event schedule</li>
+        <li>Comfortable with travel</li>
+        <li>Genuine interest in sports, entertainment, media, or brand marketing</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Echelon is a sports and entertainment services firm focused on four practice areas: sales, storytelling, sponsorship, and strategy.</p>
+      <ul>
+        <li>Services span brand consulting, property solutions, research and measurement, experiential marketing, and ticket management.</li>
+        <li>Operates an experiential subsidiary, Best.Day.Ever., which produces bespoke client experiences and national conferences.</li>
+        <li>Culture is execution-oriented: the firm publicly states its three core values of Detailed Urgency, Client Obsession, and Inventive Experiences.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://news.google.com/search?q=%22Echelon%22+sports+sponsorship" target="_blank">Google News — Echelon sports sponsorship</a><span class="note">Filter for recent sports-industry coverage</span></li>
+        <li><a href="https://www.google.com/search?q=site%3Alinkedin.com+Echelon+sports+sponsorship" target="_blank">LinkedIn search — Echelon (sports sponsorship)</a><span class="note">Find the company page and employee posts</span></li>
+        <li><a href="https://www.sportsbusinessjournal.com/" target="_blank">Sports Business Journal</a><span class="note">Industry context for agency work</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/coordinator-b2b-sponsorships-at-echelon-4402957724" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://www.google.com/search?q=%22Echelon%22+sports+sponsorship+company" target="_blank">Research Echelon</a>
+  </div>
+</div>
+
+<!-- CARD 3: TelevisaUnivision Local Media -->
+<div class="card" id="tu-local">
+  <div class="card-header">
+    <span class="fit-badge">Strong Fit · Miami</span>
+    <button class="fav-btn" data-fav="tu-local" onclick="toggleFav('tu-local', this)" aria-label="Favorite">★</button>
+    <h2>Intern, Local Media Content &amp; Operations</h2>
+    <div class="company">TelevisaUnivision</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miami, FL</strong></div>
+    <div class="meta-item">💰 <strong>$18/hr</strong></div>
+    <div class="meta-item">📅 June 8 – Aug 14, 2026</div>
+    <div class="meta-item">🎓 May 2026 grads eligible</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>They explicitly list Communications and Media Studies as eligible majors.</strong> Direct match.</li>
+        <li><strong>Timing is perfect.</strong> Posting states "recently graduated or expected graduation summer 2026 or winter 2026." You graduate May 2026.</li>
+        <li><strong>Content insights and branding</strong> are core to the role — directly connected to your major coursework.</li>
+        <li><strong>Miami-based, in-person.</strong> 45 minutes from Plantation — commutable.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (3)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Minimum 3.0 GPA required.</strong> If your GPA is below this, do not apply. If you're at/above, include it on your resume.</li>
+        <li><strong>No Tableau or Power BI listed.</strong> They note these as "a plus." Free student access: <a href="https://www.tableau.com/academic/students" target="_blank">Tableau for Students</a>.</li>
+        <li><strong>Spanish is preferred.</strong> Your resume lists "limited proficiency." Be honest in the interview — say you understand more than you speak and are improving.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c3','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c3','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c3','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c3','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c3','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c3-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Add GPA if it's 3.0 or above, right after "Expected 05/2026."</li>
+            <li>Under your degree, add relevant coursework: <em>Media Strategy, Audience Analytics, Content Production, Digital Media Studies</em> (use actual FAU course titles).</li>
+            <li>Reposition Team Israel Lacrosse Ambassador as a <strong>content and community engagement</strong> example: "Create cross-cultural content for international audiences; coordinate bilingual (English/Hebrew) community outreach across social channels."</li>
+            <li>Add to skills: <em>Excel pivot tables, Google Sheets, content calendar management</em>.</li>
+            <li>Keyword add: <em>hyperlocal content, audience insights, engagement performance, brand governance</em> — all terms pulled directly from their job description.</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c3-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>TelevisaUnivision interns and recent hires: <a href="https://www.linkedin.com/search/results/people/?keywords=TelevisaUnivision%20intern" target="_blank">LinkedIn → TelevisaUnivision interns</a></li>
+            <li>FAU alumni at TelevisaUnivision: <a href="https://www.linkedin.com/school/florida-atlantic-university/people/?keywords=TelevisaUnivision" target="_blank">FAU alumni at TU</a></li>
+            <li>Their Miami office is a hub — search "TelevisaUnivision Miami" for local team members.</li>
+          </ul>
+          <p>Prioritize reaching out to last summer's interns. They can tell you what the application process looked like in real terms.</p>
+        </div>
+
+        <div class="tab-content" id="c3-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://corporate.televisaunivision.com/about-us/" target="_blank">TelevisaUnivision corporate</a> — understand the 2022 merger between Televisa and Univision. This is their core business story.</li>
+            <li><a href="https://corporate.televisaunivision.com/news/" target="_blank">TelevisaUnivision newsroom</a> — read their last 6 months of press releases. You should know their major initiatives.</li>
+            <li><a href="https://www.vix.com/" target="_blank">ViX streaming platform</a> — this is their Spanish-language streaming service. Sign up for the free tier and spend an evening on it.</li>
+            <li><a href="https://www.adweek.com/tag/televisaunivision/" target="_blank">Adweek — TelevisaUnivision coverage</a>.</li>
+            <li>Key data point to know: Hispanic audience is the fastest-growing consumer segment in the U.S.; TelevisaUnivision reaches ~90% of Hispanic households. Mention this in your cover letter.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c3-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A multimedia journalism senior who understands sports, community, and cross-cultural storytelling — ready to help a hyperlocal content team turn audience insight into action."</strong></p>
+          <p>Tie Team Israel Lacrosse Ambassador to the "hyperlocal cultural trends" they describe. You've literally coordinated content for a minority community around a sport — that's their exact business model at scale.</p>
+        </div>
+
+        <div class="tab-content" id="c3-interview">
+          <h4>Interview prep</h4>
+          <p>This is a competitive internship (184 applicants on LinkedIn). Expect a group project as part of the program — prepare to pitch an idea.</p>
+          <ol>
+            <li>"Tell me about a time you noticed an audience pattern that others missed." → Think about FAU lacrosse club social engagement spikes, or fundraising moments at Team Israel.</li>
+            <li>"What's a recent TelevisaUnivision content piece you admired?" → Pick something specific from the last 30 days. Don't wing this.</li>
+            <li>"How do you manage competing priorities?" → Senior year + captain + part-time job = the answer.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>About the Role &amp; Team</h5>
+      <p>The Summer Internship Program will build a foundation for early career talent and form future professionals at the organization. The internship allows participants to obtain real on-the-job experiences in their areas of interest and specialty, exposing interns to the broader business and how areas operate and collaborate cross-functionally.</p>
+      <p><strong>Dates:</strong> June 8 to August 14, 2026 · <strong>Hours:</strong> 40 hours/week · <strong>Pay:</strong> $18/hr</p>
+      <h5>Day to Day</h5>
+      <ul>
+        <li><strong>Content Insights</strong> — Support the creation of a formal system to source, summarize, and elevate regional audience insights, hyper-local cultural and community trends, and content &amp; engagement performance goals</li>
+        <li><strong>Branding</strong> — Support Regional Heads in developing formal systems to define and maintain a brand governance framework across the regions and prevent brand fragmentation</li>
+        <li><strong>Distribution</strong> — Identify key market targets of white space in video and audio distribution reach; coordinate with Regional Heads and the Distribution team on a plan to mitigate reach deficiencies</li>
+        <li>Group innovation project alongside other interns, presenting ideas to an executive committee at program end</li>
+      </ul>
+      <h5>Qualifications</h5>
+      <ul>
+        <li>Currently enrolled in or recently graduated from an accredited college or university in Marketing Analytics, Business Analytics, Business Administration, Communications, Media Studies, Economics, Information Systems, Geography, or related field</li>
+        <li>Recently graduated or expected graduation of Summer 2026 or Winter 2026</li>
+        <li>Overall GPA minimum 3.0</li>
+        <li>Coursework or practical experience in analytics, market research, digital media, or data visualization</li>
+        <li>Working knowledge of Excel or Google Sheets including basic data analysis and organization</li>
+        <li>Exposure to data visualization or dashboarding tools such as Tableau or Power BI is a plus</li>
+        <li>Familiarity with digital media platforms and audience analytics preferred</li>
+        <li>Strong attention to detail with the ability to review content for accuracy and brand alignment</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>TelevisaUnivision is a leading U.S. Spanish-language media company with operations spanning broadcast television, cable networks, streaming, audio, and digital.</p>
+      <ul>
+        <li>Formed in 2022 through the combination of Televisa's media content and production assets with Univision.</li>
+        <li>Operates ViX, a Spanish-language streaming service with both free ad-supported and premium subscription tiers.</li>
+        <li>Reaches a broad U.S. Hispanic audience and produces local news and entertainment across multiple market affiliates.</li>
+        <li>Corporate offices include Miami, which hosts the summer internship program.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://corporate.televisaunivision.com/news/" target="_blank">TelevisaUnivision Newsroom (official)</a><span class="note">Press releases and corporate announcements</span></li>
+        <li><a href="https://news.google.com/search?q=%22TelevisaUnivision%22" target="_blank">Google News — TelevisaUnivision</a><span class="note">All recent coverage</span></li>
+        <li><a href="https://www.adweek.com/?s=televisaunivision" target="_blank">Adweek — TelevisaUnivision coverage</a><span class="note">Industry press</span></li>
+        <li><a href="https://variety.com/?s=televisaunivision" target="_blank">Variety — TelevisaUnivision coverage</a><span class="note">Entertainment trade press</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/4378606148" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://corporate.televisaunivision.com/" target="_blank">TelevisaUnivision corporate site</a>
+  </div>
+</div>
+
+<!-- CARD 4: TelevisaUnivision Streaming -->
+<div class="card" id="tu-streaming">
+  <div class="card-header">
+    <span class="fit-badge">Strong Fit · Miami</span>
+    <button class="fav-btn" data-fav="tu-streaming" onclick="toggleFav('tu-streaming', this)" aria-label="Favorite">★</button>
+    <h2>Intern, Streaming and Digital</h2>
+    <div class="company">TelevisaUnivision</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miami, FL</strong></div>
+    <div class="meta-item">💰 <strong>$18/hr</strong></div>
+    <div class="meta-item">📅 June 8 – Aug 14, 2026</div>
+    <div class="meta-item">🎓 Rising senior or May 2026 grad</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>"Open to majors such as Business, Marketing, Communications, Analytics, Journalism, or related fields."</strong> Your degree fits.</li>
+        <li><strong>"Must be a rising senior or recent May 2026 graduate."</strong> You are exactly that.</li>
+        <li><strong>Digital media interest required — not technical experience.</strong> They're hiring for curiosity and work ethic, not prior streaming industry background.</li>
+        <li><strong>Strong organizational skills required.</strong> Four years as a captain demonstrates this concretely.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>GPA minimum 3.0.</strong> Same filter as the Local Media role.</li>
+        <li><strong>No prior dashboard/reporting experience.</strong> Not required but mentioned — do the free <a href="https://learn.microsoft.com/en-us/training/paths/get-started-with-power-bi/" target="_blank">Microsoft Power BI fundamentals course</a> before you interview (4 hours total).</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c4','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c4','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c4','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c4','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c4','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c4-resume">
+          <h4>Optimize your resume</h4>
+          <p>Use a different version than the Local Media role. This one leans more operations/strategy.</p>
+          <ol>
+            <li>Rewrite summary: "Communications senior interested in digital media strategy and operations, with a track record of coordinating people, schedules, and performance across high-accountability environments."</li>
+            <li>Lead with Orangetheory: rewrite to emphasize operational execution and metrics (class flow, member engagement, retention). This mirrors their "audience growth, performance tracking, operational efficiency" language.</li>
+            <li>Add to skills: <em>Spreadsheets, reporting dashboards, content calendar management, workflow documentation</em>.</li>
+            <li>Add GPA if 3.0+.</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c4-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>The posting specifically names Dayana Herrera as the team lead. Connect with her on LinkedIn: <a href="https://www.linkedin.com/search/results/people/?keywords=Dayana%20Herrera%20TelevisaUnivision" target="_blank">LinkedIn search → Dayana Herrera</a></li>
+            <li>Current and former Streaming and Digital interns at TelevisaUnivision: <a href="https://www.linkedin.com/search/results/people/?keywords=TelevisaUnivision%20digital%20intern" target="_blank">LinkedIn → TU digital interns</a></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c4-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://www.vix.com/" target="_blank">ViX</a> — their streaming platform. Critical. Understand what's on it, how content is organized, which shows drive engagement.</li>
+            <li><a href="https://www.hollywoodreporter.com/tv/tv-news/" target="_blank">Hollywood Reporter — TV/Streaming news</a>. General context on the streaming industry.</li>
+            <li><a href="https://variety.com/c/tv/" target="_blank">Variety — TV coverage</a>.</li>
+            <li>Understand the streaming industry shift: ad-supported tiers (AVOD) are the growth story. ViX has a free AVOD tier — this is strategically important.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c4-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A curious communications senior who wants to learn how data and strategy come together to grow a streaming audience — and who brings the work ethic of a four-year captain."</strong></p>
+          <p>This role emphasizes strategy and operations. Lean into your captain experience as proof of strategic thinking — you've had to plan a season, allocate positions, and measure team performance.</p>
+        </div>
+
+        <div class="tab-content" id="c4-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>"Describe how you'd measure success of a new ViX show." → Engagement (watch time, completion rate), acquisition (new signups from ads), retention (return viewers).</li>
+            <li>"Tell me about a time you translated data into a decision." → Orangetheory class schedule optimization based on attendance patterns.</li>
+            <li>"Why streaming?" → The industry is being rewritten right now. Ad-supported streaming is where the growth is, and ViX is positioned at the intersection of streaming growth and the fastest-growing U.S. audience.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>About the Role &amp; Team</h5>
+      <p>The Summer Internship Program at TelevisaUnivision gives participants real on-the-job experience in digital and streaming, and exposes interns to the broader business and how areas operate and collaborate cross-functionally.</p>
+      <p><strong>Dates:</strong> June 8 to August 14, 2026 · <strong>Hours:</strong> 40 hours/week · <strong>Pay:</strong> $18/hr</p>
+      <p>This role is ideal for a highly organized, analytical, and curious candidate who is eager to learn how digital growth strategies are developed and executed at scale.</p>
+      <h5>Day to Day</h5>
+      <ul>
+        <li>Support the Core Digital Growth team in driving strategic initiatives, improving operational processes, and translating data into actionable insights across digital platforms</li>
+        <li>Work closely with Dayana Herrera and cross-functional partners in analytics, editorial, product, and monetization</li>
+        <li>Contribute to key projects focused on audience growth, performance tracking, and operational efficiency</li>
+        <li>Assist with strategic planning initiatives, building and maintaining reports and dashboards, supporting workflow documentation, and helping coordinate cross-team projects to ensure timely execution</li>
+        <li>Participate in team meetings, brainstorms, and reviews</li>
+        <li>Group innovation project with other interns, presenting to an executive committee at program end</li>
+      </ul>
+      <h5>Qualifications</h5>
+      <ul>
+        <li>Currently enrolled in or recently graduated from an accredited college or university</li>
+        <li>Must be a rising senior or recent May 2026 graduate</li>
+        <li>Open to majors such as Business, Marketing, Communications, Analytics, Journalism, or related fields</li>
+        <li>Overall GPA minimum 3.0</li>
+        <li>Strong organizational skills and attention to detail</li>
+        <li>Good written and verbal communication skills</li>
+        <li>Comfortable working with spreadsheets, documents, and presentations</li>
+        <li>Curious, eager to learn, and willing to take initiative</li>
+        <li>Interest in digital media, strategy, or business operations</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>TelevisaUnivision operates one of the largest Spanish-language media portfolios in the United States, spanning broadcast, cable, streaming, audio, and digital.</p>
+      <ul>
+        <li>Formed in 2022 through the combination of Televisa's media assets with Univision.</li>
+        <li>Operates ViX, a Spanish-language streaming service with a free ad-supported tier and a premium tier.</li>
+        <li>This internship sits on the Core Digital Growth team, which focuses on audience growth, performance tracking, and operational efficiency across TelevisaUnivision's digital platforms.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://corporate.televisaunivision.com/news/" target="_blank">TelevisaUnivision Newsroom (official)</a><span class="note">Press releases and corporate announcements</span></li>
+        <li><a href="https://news.google.com/search?q=%22ViX%22+streaming" target="_blank">Google News — ViX streaming</a><span class="note">Coverage of the streaming platform specifically</span></li>
+        <li><a href="https://www.hollywoodreporter.com/?s=televisaunivision" target="_blank">The Hollywood Reporter — TelevisaUnivision</a><span class="note">Industry press</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/4378603722" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://www.vix.com/" target="_blank">Explore ViX</a>
+  </div>
+</div>
+
+<!-- CARD 5: Prep Network -->
+<div class="card" id="prep-network">
+  <div class="card-header">
+    <span class="fit-badge">Strong Fit · Miami</span>
+    <button class="fav-btn" data-fav="prep-network" onclick="toggleFav('prep-network', this)" aria-label="Favorite">★</button>
+    <h2>Prep Girls Hoops Scout (Florida)</h2>
+    <div class="company">Prep Network</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miami, FL</strong></div>
+    <div class="meta-item">💰 <strong>Not disclosed (contract)</strong></div>
+    <div class="meta-item">🏆 Flexible location</div>
+    <div class="meta-item">✍️ Writing + social content</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>This role is built for people like you.</strong> Sports writing, social media, youth sports coverage, and recruiting promotion — these are your major, your minor, and your lived experience.</li>
+        <li><strong>You're a current collegiate athlete.</strong> You understand the recruiting journey because you've lived it. That's an edge most journalism majors don't have.</li>
+        <li><strong>Flexibility matches your schedule.</strong> "We care more about the quality of your work than your location" means you can start while finishing senior year.</li>
+        <li><strong>Named a "Best Employer in Sports" by Front Office Sports in 2020.</strong> Credible entry into the industry.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>No published sports writing clips.</strong> This is the #1 gap. Fix it this weekend — see the Resume tab for how.</li>
+        <li><strong>No basketball-specific scouting vocabulary on your resume.</strong> If you're going to scout basketball (vs. lacrosse), spend an hour learning the terminology.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c5','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c5','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c5','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c5','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c5','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c5-resume">
+          <h4>Optimize your resume</h4>
+          <p>The single highest-leverage action for this role: <strong>write two sample scout articles before you apply.</strong></p>
+          <ol>
+            <li>Attend a local high school girls' basketball or lacrosse game this week. Broward County has games most weeknights during their seasons. Use the free <a href="https://www.maxpreps.com/fl/" target="_blank">MaxPreps Florida HS sports schedule</a>.</li>
+            <li>Write two 400-word scout-style articles. Study <a href="https://prepgirlshoops.com/" target="_blank">Prep Girls Hoops sample articles</a> first to match their format.</li>
+            <li>Publish them on a free Medium account and link them from your resume. Medium setup: <a href="https://medium.com/" target="_blank">Medium.com</a>.</li>
+            <li>Lead your resume summary with: "Former four-year collegiate team captain and multimedia journalism student producing high school girls' sports coverage."</li>
+            <li>List any existing public social media (FAU Lacrosse Instagram, Team Israel content) as examples of your sports content experience.</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c5-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Current Prep Network scouts in Florida: <a href="https://www.linkedin.com/search/results/people/?keywords=Prep%20Network%20scout%20Florida" target="_blank">LinkedIn → Prep Network scouts</a></li>
+            <li>Search for Prep Girls Hoops Florida on X/Twitter to find the current regional account: <a href="https://twitter.com/search?q=%22Prep%20Girls%20Hoops%22%20Florida&amp;f=user" target="_blank">X search — Prep Girls Hoops Florida</a>. Once you find the active account, follow and engage thoughtfully.</li>
+            <li>Florida high school girls' basketball coaches — many are active on Twitter/X. Build rapport by retweeting and commenting thoughtfully.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c5-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://prepgirlshoops.com/" target="_blank">Prep Girls Hoops main site</a> — read 10+ of their articles. Learn the voice and structure.</li>
+            <li><a href="https://www.prepnetwork.com/" target="_blank">Prep Network corporate</a> — know the parent company covers Hoops, Football, Lacrosse, Volleyball, and Dig.</li>
+            <li><a href="https://frontofficesports.com/best-employers-in-sports/" target="_blank">Front Office Sports — Best Employers in Sports</a>. Prep Network was recognized; reference this in your cover letter.</li>
+            <li>Study <a href="https://www.ncaa.org/sports/2019/11/21/recruiting-calendars-and-windows.aspx" target="_blank">NCAA recruiting calendar</a> — know when live periods happen. Your content will align with these windows.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c5-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"Former four-year collegiate team captain and multimedia journalism senior — I've lived the recruiting journey and I can tell these players' stories because I know them from the inside."</strong></p>
+          <p>This is a role where your athlete background is the differentiator, not the journalism degree. Most applicants will have one or the other — you have both.</p>
+        </div>
+
+        <div class="tab-content" id="c5-interview">
+          <h4>Interview prep</h4>
+          <p>The interview will almost certainly include a writing test. Be ready to produce a short article from game notes in 30 minutes.</p>
+          <ol>
+            <li>Practice writing a 300-word scout note in under 20 minutes. Use Prep Network articles as your template.</li>
+            <li>Prepare to pitch 3 Florida girls' basketball stories you'd want to cover in your first month.</li>
+            <li>Know one rising Florida girls' basketball prospect by name. They want scouts who are already paying attention.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>About Prep Network</h5>
+      <p>Prep Network operates websites — 100+ in total — aimed at maximizing visibility and value for high school athletes at all levels. Scouts provide content, player rankings, and event coverage year-round. Prep Network operates Prep Hoops, Prep Girls Hoops, Prep Redzone, Prep Dig, and Prep Lacrosse. Combined, Prep Network websites have over 300 scouts nationwide that produce 2,500+ articles each month on prep basketball, football, and volleyball. Prep Network also operates 100+ tournaments and showcases.</p>
+      <h5>Job Description</h5>
+      <p>As a scout, you will create written and social media content. You will attend high school and club games, watch game film, and publish player-driven analysis on Prep Network's website. You will utilize your existing network with high school and college coaches in your community to grow the Prep Network footprint.</p>
+      <h5>Responsibilities and Duties</h5>
+      <ul>
+        <li>Attend high school and club games and publish written and social media content</li>
+        <li>Promote players at all levels of collegiate recruitment</li>
+        <li>Work with other Prep Network contributors to maximize the value added to teams, players, and coaches in your state</li>
+        <li>Network with coaches at all levels to grow the Prep Network brand</li>
+      </ul>
+      <h5>We Are Looking For Someone Who Is</h5>
+      <ul>
+        <li><strong>Entrepreneurial.</strong> Help build the fastest-growing high school sports network in the country</li>
+        <li><strong>A Great Teammate.</strong> No job is too small</li>
+        <li><strong>Driven.</strong> Self-motivated and able to perform without direct supervision</li>
+        <li><strong>A Strong Communicator.</strong> Excellent interpersonal, verbal, and written skills</li>
+        <li><strong>Experienced with Microsoft &amp; Google.</strong> Proficient with Microsoft Office and Google Apps</li>
+      </ul>
+      <h5>Benefits and Perks</h5>
+      <ul>
+        <li>Flexibility — care more about the quality of your work than your location</li>
+        <li>Awesome co-workers in a company culture they actively invest in</li>
+        <li>Potential for growth within the company</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Prep Network (<a href="https://www.prepnetwork.com" target="_blank">prepnetwork.com</a>) is a high school sports media company with coverage across basketball, football, volleyball, and lacrosse.</p>
+      <ul>
+        <li>Operates the Prep Hoops, Prep Girls Hoops, Prep Redzone, Prep Dig, and Prep Lacrosse brand networks.</li>
+        <li>More than 300 scouts nationwide produce over 2,500 articles per month.</li>
+        <li>Runs 100+ tournaments and showcases annually across the country.</li>
+        <li>Recognized as a 2020 recipient of the Best Employers in Sports Award by Front Office Sports, and as a Minneapolis St. Paul Best Places to Work honoree (per the job posting).</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://prepgirlshoops.com/" target="_blank">Prep Girls Hoops (primary publication)</a><span class="note">Read the content you'd be producing</span></li>
+        <li><a href="https://www.prepnetwork.com/" target="_blank">Prep Network corporate</a><span class="note">Parent company site</span></li>
+        <li><a href="https://news.google.com/search?q=%22Prep+Girls+Hoops%22" target="_blank">Google News — Prep Girls Hoops</a><span class="note">Mentions in broader coverage</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/4402607075" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://prepgirlshoops.com/" target="_blank">Prep Girls Hoops site</a>
+  </div>
+</div>
+
+<!-- CARD 6: Enterprise -->
+<div class="card" id="enterprise">
+  <div class="card-header">
+    <span class="fit-badge">Strong Fit · Miami</span>
+    <button class="fav-btn" data-fav="enterprise" onclick="toggleFav('enterprise', this)" aria-label="Favorite">★</button>
+    <h2>Management Trainee</h2>
+    <div class="company">Enterprise Mobility</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miami, FL</strong> (2 locations)</div>
+    <div class="meta-item">💰 <strong>$60,005 target yr 1</strong></div>
+    <div class="meta-item">🎓 Bachelor's required</div>
+    <div class="meta-item">🏃 Athletics counts as experience</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Bachelor's in Multimedia Journalism</strong> meets their degree requirement — major doesn't matter to them.</li>
+        <li><strong>They explicitly list "athletics/team activities" as qualifying experience.</strong> Your four years as FAU lacrosse captain directly qualifies.</li>
+        <li><strong>Sales and customer service at Orangetheory</strong> maps to their alternative qualifying experience.</li>
+        <li><strong>Valid driver's license with clean record</strong> — assumed in your profile.</li>
+        <li><strong>Classic entry point for student-athletes.</strong> Enterprise has hired thousands of former college athletes into this program for decades.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Not a sports or media role.</strong> Enterprise is general management training (sales, ops, finance). If your heart is 100% in sports media, this is a backup, not a first choice.</li>
+        <li><strong>46-hour work weeks.</strong> The "competitive compensation" includes expected overtime. Know what you're signing up for.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c6','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c6','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c6','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c6','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c6','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c6-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Lead with leadership and sales. Rewrite summary: "Four-year collegiate team captain with 3+ years of customer-facing sales experience seeking to leverage leadership and business acumen through Enterprise's Management Training program."</li>
+            <li>Emphasize sales metrics at Orangetheory: number of memberships sold, renewal rates, customer retention percentages. If you don't have exact numbers, use honest directional language ("Supported studio in exceeding monthly membership targets").</li>
+            <li>Describe lacrosse captain role in management language: "Led 20+ player roster through full-season planning, conflict resolution, and performance management."</li>
+            <li>Add to skills: <em>Team leadership, conflict resolution, sales performance, customer retention</em>.</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c6-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Enterprise Management Trainees (current and alumni): <a href="https://www.linkedin.com/search/results/people/?keywords=Enterprise%20Management%20Trainee%20Miami" target="_blank">LinkedIn → Enterprise MTs in Miami</a></li>
+            <li>Search specifically for former college athletes who went through the program: <a href="https://www.linkedin.com/search/results/people/?keywords=Enterprise%20former%20athlete%20lacrosse" target="_blank">LinkedIn → Enterprise + athlete backgrounds</a></li>
+            <li>Many MTs get promoted within 12–18 months. Look for people now working as Assistant Branch Managers or Branch Managers — they were MTs recently.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c6-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://careers.enterprise.com/management-training-program" target="_blank">Enterprise Management Training Program overview</a> — official program description.</li>
+            <li><a href="https://www.glassdoor.com/Search/results.htm?keyword=Enterprise%20Mobility" target="_blank">Glassdoor — search Enterprise Mobility</a>. Read "Management Trainee" interview reviews.</li>
+            <li><a href="https://www.indeed.com/cmp/Enterprise-Holdings/reviews" target="_blank">Indeed reviews — Enterprise</a>. Read 20+ reviews. You'll see patterns about hours, promotion speed, and culture.</li>
+            <li>Key fact: Enterprise Mobility is the largest private company in car rental, managing 2.4M vehicles. Privately held by the Taylor family. This long-term stability is a selling point.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c6-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A four-year team captain with proven sales and leadership experience, ready to run my own branch within 18–24 months."</strong></p>
+          <p>Enterprise hires for trajectory, not for present skills. Show you want to be promoted fast and will put in the work.</p>
+        </div>
+
+        <div class="tab-content" id="c6-interview">
+          <h4>Interview prep</h4>
+          <p>Enterprise has a multi-stage interview including a group panel and sometimes a role-play. They emphasize behavioral questions.</p>
+          <ol>
+            <li>"Tell me about a time you influenced someone to change their mind." → Team captain decision scenario.</li>
+            <li>"Describe a time you exceeded a sales goal." → Orangetheory membership story with numbers if possible.</li>
+            <li>"Why Enterprise?" → Run your own branch. Build a team. Learn every function of a business from the inside.</li>
+            <li>"Where do you see yourself in 5 years?" → Branch Manager at minimum. They want ambition.</li>
+          </ol>
+          <p>See interview prep specifically for Enterprise: <a href="https://www.themuse.com/advice/enterprise-rent-a-car-interview" target="_blank">The Muse — Enterprise interview guide</a></p>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Overview</h5>
+      <p>Start your career with Enterprise Mobility in our respected Management Training Program. Whether you see yourself in sales, business development, customer service, retail management, or operations, as a manager in training, you can count on a career path with a clear beginning and an open end that's full of opportunities. With training, development, mentoring, and a culture of promotion from within, you'll always be progressing in your career.</p>
+      <h5>Compensation &amp; Benefits</h5>
+      <ul>
+        <li>First-year targeted annual compensation of $60,005 (hourly rate of $23.55 plus applicable overtime, based on average 46-hour work week)</li>
+        <li>Paid Time Off starting with 5 days upon hire, 12 days first year, plus 6 holidays</li>
+        <li>Health, Dental, Vision insurance; Life Insurance; Prescription coverage</li>
+        <li>Employee discounts on car rentals, car purchases and more</li>
+        <li>401(k) retirement plan with company match and profit sharing</li>
+      </ul>
+      <h5>Responsibilities</h5>
+      <p>As a Management Trainee, you'll start learning the business from day one while based out of a neighborhood branch. You will serve as both the face of Enterprise to customers and partners and the behind-the-scenes operational expert. In the structured program, you will master the knowledge and skills you need to eventually run your own branch, cultivate new business, and develop your team.</p>
+      <p>You'll learn customer service, sales and marketing, finance, and operations. You'll also establish community relationships essential to building your own business.</p>
+      <h5>Qualifications</h5>
+      <ul>
+        <li>Bachelor's degree required</li>
+        <li>Minimum of 6 months experience in one of the following: sales &amp; customer service (commission sales, retail, serving/restaurant/bar, or hospitality industry) OR leadership (military, athletics/team activities, or community, social, or academic organizations)</li>
+        <li>Valid driver's license with no more than 2 moving violations in the last 3 years</li>
+        <li>No alcohol or drug related conviction on driving record in the last 5 years</li>
+        <li>Must be authorized to work in the United States</li>
+        <li>Must be at least 18 years old</li>
+      </ul>
+      <p><strong>Two Miami locations available:</strong> 12394 SW 128th Street, Miami, FL 33186 and 1109 Brickell Ave, Miami, FL 33131.</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Enterprise Mobility is a leading provider of mobility solutions, owning and operating the Enterprise Rent-A-Car, National Car Rental, and Alamo Rent A Car brands through its integrated global network of independent regional subsidiaries.</p>
+      <ul>
+        <li>Privately held by the Taylor family of St. Louis.</li>
+        <li>Together with its affiliate Enterprise Fleet Management, manages a diverse fleet of 2.4 million vehicles.</li>
+        <li>Accounted for nearly $39 billion in revenue through a network of more than 9,500 fully-staffed neighborhood and airport rental locations in more than 90 countries and territories.</li>
+        <li>Affiliates also offer carsharing, truck rental, fleet management, retail car sales, travel management, and other transportation services.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://www.enterprisemobility.com/en/about/news.html" target="_blank">Enterprise Mobility Newsroom (official)</a><span class="note">Official press releases</span></li>
+        <li><a href="https://news.google.com/search?q=%22Enterprise+Mobility%22" target="_blank">Google News — Enterprise Mobility</a><span class="note">Current coverage</span></li>
+        <li><a href="https://www.glassdoor.com/Search/results.htm?keyword=Enterprise%20Management%20Trainee" target="_blank">Glassdoor — Management Trainee reviews</a><span class="note">What current/former MTs say about the role</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/management-trainee-at-enterprise-4378235007" target="_blank">Apply — Brickell Ave →</a>
+    <a class="btn btn-secondary" href="https://www.linkedin.com/jobs/view/4378205704" target="_blank">Apply — SW 128th St location</a>
+  </div>
+</div>
+
+<!-- CARD 7: AEG SponsorUniversity -->
+<div class="card" id="sponsor-united">
+  <div class="card-header">
+    <span class="fit-badge">Strong Fit · Remote · Unpaid Credential</span>
+    <button class="fav-btn" data-fav="sponsor-united" onclick="toggleFav('sponsor-united', this)" aria-label="Favorite">★</button>
+    <h2>SponsorUniversity Media Sponsorship Scout</h2>
+    <div class="company">SponsorUnited (via AEG)</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Remote, Miami-based</strong></div>
+    <div class="meta-item">💰 <strong>Unpaid (academic credit)</strong></div>
+    <div class="meta-item">⏳ 10–15 hrs/wk, 6 months</div>
+    <div class="meta-item">🏆 Sports sponsorship training</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Structured training program.</strong> SponsorUniversity is designed for students — you don't need prior experience.</li>
+        <li><strong>Communications/Sports Management/Business majors listed as preferred.</strong> You fit.</li>
+        <li><strong>Part-time while finishing senior year.</strong> 10–15 hours fits around school and Orangetheory.</li>
+        <li><strong>Certificate of completion</strong> is a résumé credential in the exact industry you want to break into.</li>
+        <li><strong>SponsorUnited is the category leader.</strong> Their platform is used by virtually every major brand and property. Using it fluently is a résumé marker.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (1)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Unpaid.</strong> Only take this if you can afford the time and if it displaces lower-value activities — not if it replaces paid work hours you need.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c7','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c7','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c7','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c7','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c7','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c7-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>First: check with FAU's Sport Business Association advisor about getting academic credit for this. Without credit, the calculus changes.</li>
+            <li>For the application, emphasize: attention to detail, independence, and curiosity about sponsorship activations.</li>
+            <li>Once accepted, add to resume: "Sports Sponsorship Research Fellow — SponsorUnited (SponsorUniversity Program)."</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c7-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Current and past SponsorUniversity participants: <a href="https://www.linkedin.com/search/results/people/?keywords=SponsorUniversity" target="_blank">LinkedIn → SponsorUniversity participants</a></li>
+            <li>SponsorUnited full-time staff: <a href="https://www.linkedin.com/company/sponsorunited" target="_blank">SponsorUnited on LinkedIn</a> → See all employees.</li>
+            <li>Bob Lynch (Founder/CEO) is active on LinkedIn — follow him.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c7-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://www.sponsorunited.com/" target="_blank">SponsorUnited main site</a>. Understand that they track 250,000+ brands across every sport and league.</li>
+            <li><a href="https://www.sponsorunited.com/resources" target="_blank">SponsorUnited resource hub</a>. Download their latest "State of the Industry" report.</li>
+            <li><a href="https://www.sportsbusinessjournal.com/" target="_blank">Sports Business Journal</a>. SBJ covers the sponsorship industry constantly — skim weekly.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c7-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A sports business student ready to learn the sponsorship data industry from the inside — and ready to put in 15 focused hours per week for six months to earn the credential."</strong></p>
+          <p>This program rewards curiosity and consistency over existing expertise. Don't overclaim — they want trainable people.</p>
+        </div>
+
+        <div class="tab-content" id="c7-interview">
+          <h4>Interview prep</h4>
+          <p>This is more application than interview — likely a short qualifying conversation. Be ready to explain:</p>
+          <ol>
+            <li>Why sponsorship (not brand marketing, not agency): because you want to understand the deal side of sports.</li>
+            <li>How you'll fit this into your schedule: specific plan, not vague commitment.</li>
+            <li>One sponsorship example you find interesting and why.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>About SponsorUnited</h5>
+      <p>Launched in 2018, SponsorUnited is a global sports and entertainment SaaS platform, delivering actionable data and insights to build stronger marketing partnerships.</p>
+      <p>Bob Lynch, Founder &amp; CEO: "SponsorUnited was founded with the mission to simplify the increasingly complex sponsorship ecosystem. We strive to unite partners across all sides of the deal by providing them with unrivaled market intelligence and, ultimately, empower them to make smarter, more impactful business decisions."</p>
+      <h5>Job Description</h5>
+      <p>SponsorUnited's training program, SponsorUniversity, is a professional development experience designed to introduce students to the sponsorship and media industry. Participants gain hands-on experience in data management and research across both traditional broadcast and digital media platforms.</p>
+      <p><strong>Time Needed:</strong> 10–15 hours per week for 6 months. <strong>Compensation:</strong> Unpaid, with opportunity for academic credit. Entirely remote.</p>
+      <h5>Responsibilities</h5>
+      <ul>
+        <li>Complete an online training program on sponsorship data management within the sports and entertainment industry, emphasizing broadcast and digital media</li>
+        <li>Participate in supervised learning exercises analyzing sponsorship and advertising content featured in local and national television and radio broadcasts</li>
+        <li>Conduct research-based training activities exploring sponsorship activity and brand integrations across digital and social media platforms</li>
+        <li>Learn how to effectively use the SponsorUnited platform through detailed guidance</li>
+      </ul>
+      <h5>Benefits to Students</h5>
+      <ul>
+        <li>Exposure to real industry data used by sponsorship professionals at top global brands and agencies</li>
+        <li>Development of professional and communication skills in a remote tech environment</li>
+        <li>Qualify for academic credit through your university's internship program</li>
+        <li>Earn a certificate of completion upon "graduation" from the program</li>
+        <li>Participate in gamified challenges with special prizes</li>
+        <li>Access to knowhow of sports industry professionals and brands</li>
+      </ul>
+      <h5>Qualifications</h5>
+      <ul>
+        <li>Availability of 10–15 hours per week for 6 months</li>
+        <li>Strong attention to detail, time management, and organizational skills</li>
+        <li>Demonstrated initiative, curiosity, and ability to work independently</li>
+        <li>Proficient with online research tools and platforms</li>
+        <li>High level of English fluency in written and spoken form</li>
+        <li>Background in Marketing, Business, Communications, Data Analytics, or Sports Management preferred but not essential</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>SponsorUnited is a sports and entertainment SaaS platform focused on sponsorship data and market intelligence.</p>
+      <ul>
+        <li>Launched in 2018 by founder &amp; CEO Bob Lynch.</li>
+        <li>Serves brands, rights holders, and agencies with data on sponsorship deals across sports, entertainment, and media.</li>
+        <li>The SponsorUniversity program is the company's structured student training track, designed as an introduction to sponsorship data work.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://www.sponsorunited.com/" target="_blank">SponsorUnited.com (official)</a><span class="note">Main site — newsroom links are in the footer</span></li>
+        <li><a href="https://news.google.com/search?q=%22SponsorUnited%22" target="_blank">Google News — SponsorUnited</a><span class="note">Current coverage and partnership announcements</span></li>
+        <li><a href="https://www.linkedin.com/company/sponsorunited/posts/" target="_blank">SponsorUnited on LinkedIn — Posts</a><span class="note">Real-time updates, often include industry reports</span></li>
+        <li><a href="https://www.sportsbusinessjournal.com/" target="_blank">Sports Business Journal</a><span class="note">SBJ covers sponsorship deals and often cites SponsorUnited data</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.google.com/search?q=SponsorUniversity+Media+Sponsorship+Scout+apply" target="_blank">Find the application →</a>
+    <a class="btn btn-secondary" href="https://www.sponsorunited.com/" target="_blank">SponsorUnited.com</a>
+  </div>
+</div>
+
+<div class="tier-header tier-stretch">✦ Realistic Stretch (7 roles — worth applying with preparation)</div>
+
+<!-- CARD 8: Van Wagner -->
+<div class="card" id="van-wagner">
+  <div class="card-header stretch">
+    <span class="fit-badge">Stretch · Remote</span>
+    <button class="fav-btn" data-fav="van-wagner" onclick="toggleFav('van-wagner', this)" aria-label="Favorite">★</button>
+    <h2>Digital Marketing Coordinator</h2>
+    <div class="company">Van Wagner (sports marketing agency)</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Remote (US)</strong></div>
+    <div class="meta-item">💰 <strong>$50,000–$60,000</strong></div>
+    <div class="meta-item">🎓 Bachelor's required</div>
+    <div class="meta-item">🎨 InDesign required</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Van Wagner is a sports marketing agency</strong> with a college sponsorship practice — directly adjacent to your sports minor.</li>
+        <li><strong>Responsibilities are entry-friendly:</strong> social media, email newsletter support, event logistics, and sponsorship fulfillment.</li>
+        <li><strong>Remote-eligible,</strong> which widens the candidate pool they'll consider beyond their traditional office hubs.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (3)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Adobe Creative Suite — InDesign specifically.</strong> They require a portfolio. This is the #1 gap. Learn it in one weekend: <a href="https://helpx.adobe.com/indesign/tutorials.html" target="_blank">Adobe InDesign official tutorials</a>.</li>
+        <li><strong>No formal marketing portfolio.</strong> Build 3 sample pieces: a sponsorship proposal deck, a social graphic set, a monthly newsletter design.</li>
+        <li><strong>Email marketing experience (MailChimp).</strong> Free tier available — create a mock newsletter for FAU Lacrosse to demonstrate: <a href="https://mailchimp.com/pricing/marketing/" target="_blank">MailChimp free plan</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c8','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c8','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c8','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c8','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c8','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c8-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Portfolio link is mandatory. Do not apply without one. Build on Notion or a simple Squarespace/Wix site in one weekend.</li>
+            <li>Learn InDesign this week. <a href="https://www.linkedin.com/learning/indesign-quick-start" target="_blank">LinkedIn Learning — InDesign Quick Start</a> (2 hours).</li>
+            <li>List Adobe Creative Suite on your skills section once you can actually use it — don't claim it if you can't deliver.</li>
+            <li>Frame your Team Israel ambassador role as "multi-channel content and fundraising support" — this matches their sponsorship fulfillment responsibilities.</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c8-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Van Wagner current employees: <a href="https://www.linkedin.com/company/van-wagner-group/people/" target="_blank">Van Wagner on LinkedIn — employees</a></li>
+            <li>Search for college marketing coordinators who worked at Van Wagner — this is a common pipeline role.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c8-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://www.vanwagner.com/" target="_blank">Van Wagner main site</a> — read the About page to understand their divisions and current service offerings.</li>
+            <li><a href="https://news.google.com/search?q=%22Van+Wagner%22+sports" target="_blank">Google News — Van Wagner sports</a> — recent deals and partnership announcements.</li>
+            <li>Understand college sponsorship and NIL economics: <a href="https://news.google.com/search?q=%22NIL%22+college+sponsorship" target="_blank">Google News — NIL college sponsorship</a>.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c8-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A current collegiate athlete studying communications who can design, write, and execute — ready to scale into sponsorship marketing."</strong></p>
+          <p>Your sports minor and athlete status are the hook. The InDesign portfolio is what makes you a real applicant vs. aspirational.</p>
+        </div>
+
+        <div class="tab-content" id="c8-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>Bring portfolio to the interview. Walk through 3 pieces in 10 minutes.</li>
+            <li>Know the difference between a sponsor proposal and a sponsor activation recap — they'll ask.</li>
+            <li>"Describe a social campaign you admire in college sports." → Prepare something current and specific.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Summary</h5>
+      <p>Van Wagner College is seeking a creative professional with graphic design skills and marketing knowledge to support the Senior Vice President of Marketing.</p>
+      <h5>Primary Responsibilities</h5>
+      <ul>
+        <li>Bring a fresh creative approach while working on a variety of projects</li>
+        <li>Conceptual development and creative execution of business presentations and sales pitches in InDesign</li>
+        <li>Manage and enhance the division's social media presence to increase industry visibility</li>
+        <li>Execute and maintain a year-long social media content calendar</li>
+        <li>Development and creation of monthly division-wide e-newsletters</li>
+        <li>Creation of graphics to enhance social media channels, promotional materials, expo brochures, promotional signage, custom invitations/save-the-dates, business cards</li>
+        <li>Organizational skills with attention to detail to assist in planning, researching, and organizing social and business events</li>
+        <li>Provide hands-on support at various events and conferences throughout the year (some travel required)</li>
+        <li>Provide support, as needed, for the implementation and fulfillment of select national/regional sponsor accounts</li>
+        <li>Liaise with internal teams and properties to handle various sponsorship fulfilment items on behalf of client — activation planning, coordination of hospitality/tickets, production/signage, sweepstakes oversight, promotions</li>
+        <li>Track and monitor industry trends and prepare reports on a year-round basis</li>
+        <li>Create templates and consolidate marketing information into an organized structure to form a regional/divisional database</li>
+        <li>Assist with the on-boarding of new partnerships by updating division-wide creative, partnership announcements, generating proposal deck templates, social media graphics</li>
+      </ul>
+      <h5>Qualifications</h5>
+      <ul>
+        <li>Bachelor's degree in relevant discipline</li>
+        <li>Strong knowledge of all Adobe Creative Suite software (InDesign, Photoshop, Illustrator) — portfolio required</li>
+        <li>Proficiency in all MS Office software</li>
+        <li>Proficient with navigating and working within social media platforms</li>
+        <li>Proficiency in email marketing programs (MailChimp, Constant Contact, etc.), Canva, and video editing platforms</li>
+        <li>Coachable, quick learner, with exceptional attention to detail</li>
+        <li>Talent for creativity and problem-solving</li>
+        <li>Ability to multi-task and work in a fast-paced environment</li>
+      </ul>
+      <h5>Compensation</h5>
+      <p>Annual base salary range: $50,000 – $60,000. Remote role. Benefits include medical, dental, vision, life insurance, and 401(k).</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Van Wagner is a sports and out-of-home marketing firm. The posting is for a role within the "Van Wagner College" division, which focuses on college athletics sponsorship and activation.</p>
+      <ul>
+        <li>Services span sponsorship sales, creative, signage, event production, and sponsorship fulfillment.</li>
+        <li>The role reports to a Senior Vice President of Marketing and works across college-athletics client accounts.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://www.vanwagner.com/" target="_blank">Van Wagner main site (official)</a><span class="note">Look for the News or Press section in the site footer</span></li>
+        <li><a href="https://news.google.com/search?q=%22Van+Wagner%22+sports" target="_blank">Google News — Van Wagner sports</a><span class="note">Recent deal announcements and industry coverage</span></li>
+        <li><a href="https://www.sportsbusinessjournal.com/" target="_blank">Sports Business Journal</a><span class="note">Covers college athletics sponsorship deals regularly</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/4399564878" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://www.vanwagner.com/" target="_blank">Van Wagner site</a>
+  </div>
+</div>
+
+<!-- CARD 9: Miami Foundation -->
+<div class="card" id="miami-foundation">
+  <div class="card-header stretch">
+    <span class="fit-badge">Stretch · Miami</span>
+    <button class="fav-btn" data-fav="miami-foundation" onclick="toggleFav('miami-foundation', this)" aria-label="Favorite">★</button>
+    <h2>Event Planning Assistant</h2>
+    <div class="company">The Miami Foundation</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miami, FL</strong></div>
+    <div class="meta-item">💰 <strong>$47,000–$52,000</strong></div>
+    <div class="meta-item">🎓 Bachelor's required</div>
+    <div class="meta-item">⏳ 2+ yrs event ops (stretch)</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Mission-driven role.</strong> Supporting Give Miami Day (largest single-city giving day in the nation) aligns well with your community engagement experience through Team Israel Lacrosse.</li>
+        <li><strong>Event coordination skills</strong> — you've handled tournament logistics, travel, and team events for four years.</li>
+        <li><strong>Miami-based with cross-team coordination</strong> — fits your collaborative background from captaincy.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>2+ years event operations/logistics preferred.</strong> You have applied event experience (lacrosse tournaments, camp programs) but not formal event production. Position your experience accurately — don't overclaim.</li>
+        <li><strong>No nonprofit/foundation background.</strong> They prefer it. Address this directly in your cover letter with Team Israel as proof of nonprofit-adjacent work.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c9','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c9','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c9','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c9','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c9','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c9-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Translate your sports experience into event operations language. Lacrosse captain responsibilities include: "coordinate season travel for 20+ players," "manage tournament registration and logistics," "liaise with vendors (uniforms, equipment, travel)."</li>
+            <li>Lead summer counselor roles with event execution language: "executed daily programming for 50+ campers, including schedule coordination, supply management, and vendor liaison."</li>
+            <li>Add keywords from the posting: <em>project plans, stakeholder coordination, vendor management, on-site execution, post-event reporting</em>.</li>
+            <li>List Team Israel Lacrosse Ambassador with fundraising emphasis: "Supported fundraising initiatives and community outreach aligned with nonprofit mission."</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c9-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Miami Foundation employees: <a href="https://www.linkedin.com/company/the-miami-foundation/people/" target="_blank">Miami Foundation on LinkedIn → employees</a></li>
+            <li>Former Miami Foundation interns/coordinators — entry point into nonprofit Miami.</li>
+            <li>Give Miami Day past participants and sponsors — they're often active on LinkedIn around November.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c9-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://miamifoundation.org/" target="_blank">The Miami Foundation</a> — understand they're a community foundation (not a family foundation). They channel $900M+ in community philanthropy.</li>
+            <li><a href="https://givemiamiday.org/" target="_blank">Give Miami Day</a>. The flagship event you'd support. Learn its history, goals, and format.</li>
+            <li><a href="https://miamifoundation.org/publications/" target="_blank">Miami Foundation publications</a> — read their most recent annual report.</li>
+            <li><a href="https://www.philanthropy.com/" target="_blank">Chronicle of Philanthropy</a> — general nonprofit industry context.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c9-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A communications senior with four years of coordinating sports logistics and fundraising outreach — ready to bring that same detail-driven execution to the largest civic event in Miami."</strong></p>
+          <p>Give Miami Day is effectively a marathon event. Your captain background shows you can sustain focus through long, high-pressure cycles.</p>
+        </div>
+
+        <div class="tab-content" id="c9-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>"Walk me through how you'd plan a 3-day multi-venue event for 500 guests." → Use your lacrosse tournament experience as the spine of the answer.</li>
+            <li>"How do you handle a vendor missing a deadline?" → Specific story with how you resolved it.</li>
+            <li>"Why nonprofit work?" → Connect to your Team Israel mission work.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Position Description</h5>
+      <p>The Miami Foundation is seeking a values-driven, highly organized, collaborative, and solutions-oriented Event Planning Assistant to help the Foundation deliver large-scale, mission-driven convenings that inspire generosity, strengthen community engagement, and elevate the overall experience for donors, nonprofits, partners, and the broader public.</p>
+      <p>The Event Planning Assistant supports the work of the Strategic Communications Department and the planning and execution of Give Miami Day, the largest single-city giving day in the nation.</p>
+      <h5>Duties and Responsibilities</h5>
+      <p><strong>Campaign and Event Planning:</strong></p>
+      <ul>
+        <li>Develop, maintain, and oversee master project plans for Give Miami Day and other assigned special events, integrating timelines and deliverables across programming, sponsorship, communications, and operations</li>
+        <li>Coordinate regular planning meetings with internal project leads and track milestones, action items, and dependencies across multiple events</li>
+        <li>Support risk assessment and contingency planning for all major events</li>
+      </ul>
+      <p><strong>Event Operations and Logistics:</strong></p>
+      <ul>
+        <li>Support the operational planning and execution of Give Miami Day events, including the 5K Race, Festival, Mission Control, and related activations</li>
+        <li>Support the planning and execution of other special events, convenings, and donor experiences hosted by The Miami Foundation</li>
+        <li>Coordinate load-in and load-out schedules, equipment deliveries, signage placement, staffing plans, and on-site logistics</li>
+        <li>Support permitting, insurance, safety planning, and compliance requirements</li>
+        <li>Assist with staff and volunteer scheduling, training, and day-of operations</li>
+        <li>Provide on-site leadership during Give Miami Day events and other special events</li>
+      </ul>
+      <p><strong>Cross-Team Coordination and Vendor Management:</strong></p>
+      <ul>
+        <li>Ensure alignment across workstreams and support teams in meeting shared timelines and goals</li>
+        <li>Support the management of external vendors and partners — production teams, AV providers, venues, and activation partners</li>
+        <li>Track vendor deliverables, timelines, and on-site needs</li>
+      </ul>
+      <h5>Experience Required</h5>
+      <ul>
+        <li>Bachelor's degree or equivalent professional experience required</li>
+        <li>2+ years of experience in event operations, project management, logistics, or related fields</li>
+        <li>Supporting large-scale, multi-stakeholder events or campaigns</li>
+        <li>Proficiency with project management tools and shared documentation platforms</li>
+      </ul>
+      <h5>Compensation</h5>
+      <p>Pay range: $22.60 – $25.00 per hour ($47,000 – $52,000 annual equivalent). Non-exempt role. Reports to the Give Miami Day and Special Events Director.</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>The Miami Foundation is a community foundation focused on leadership, generosity, and civic engagement across Greater Miami.</p>
+      <ul>
+        <li>Founded in 1967; has invested over $900M to strengthen Greater Miami in partnership with more than 1,000 partners and over 60,000 donors (per their stated figures).</li>
+        <li>Produces Give Miami Day, described as the largest single-city giving day in the nation.</li>
+        <li>Works with nonprofits, donors, leaders, and local organizations to channel philanthropy and community investment.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://miamifoundation.org/" target="_blank">The Miami Foundation (official site)</a><span class="note">Look for News/Publications in site navigation</span></li>
+        <li><a href="https://givemiamiday.org/" target="_blank">Give Miami Day (official)</a><span class="note">The flagship event you'd be supporting</span></li>
+        <li><a href="https://news.google.com/search?q=%22Miami+Foundation%22+OR+%22Give+Miami+Day%22" target="_blank">Google News — Miami Foundation</a><span class="note">Current coverage in local and national press</span></li>
+        <li><a href="https://www.miamiherald.com/search/?q=%22Miami+Foundation%22" target="_blank">Miami Herald — search Miami Foundation</a><span class="note">Local coverage</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/4378385168" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://miamifoundation.org/" target="_blank">Miami Foundation site</a>
+  </div>
+</div>
+
+<!-- CARD 10: Coke Florida -->
+<div class="card" id="coke-florida">
+  <div class="card-header stretch">
+    <span class="fit-badge">Stretch · Hollywood, FL</span>
+    <button class="fav-btn" data-fav="coke-florida" onclick="toggleFav('coke-florida', this)" aria-label="Favorite">★</button>
+    <h2>Specialist, Field Marketing Execution</h2>
+    <div class="company">Coca-Cola Beverages Florida</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Hollywood, FL</strong></div>
+    <div class="meta-item">💰 <strong>Not disclosed</strong></div>
+    <div class="meta-item">🎓 Bachelor's preferred</div>
+    <div class="meta-item">⏳ 1–3 yrs experience</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Hollywood, FL location</strong> — 30 minutes from Plantation, highly commutable.</li>
+        <li><strong>Coca-Cola is a premier CPG brand</strong> — prestigious first job on your resume.</li>
+        <li><strong>Event marketing responsibilities</strong> match your tournament and camp experience.</li>
+        <li><strong>Brand-loyal, energetic workplace</strong> — the role description rewards your exact personality profile.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (3)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>No formal marketing experience.</strong> Position your Orangetheory role as brand-aligned customer experience — that's field marketing's cousin.</li>
+        <li><strong>No national brand activation work.</strong> You'll need to show you understand how a beverage brand shows up at events. Attend a local Coca-Cola activation before interviewing if possible.</li>
+        <li><strong>Ariba system (procurement software).</strong> Mentioned in the posting. Not required for application but worth learning basics.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c10','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c10','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c10','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c10','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c10','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c10-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Rewrite Orangetheory bullets with marketing language: "Deliver brand-aligned customer experience, supporting regional membership acquisition and member retention metrics."</li>
+            <li>Reframe camp counselor role: "Executed daily events for 50+ participants, coordinating supplies, schedules, and on-site activations."</li>
+            <li>Add to skills: <em>Event execution, POS coordination, vendor management, promotional activation</em>.</li>
+            <li>Add a "Brand Affinity" line below skills: "Active consumer and observer of CPG activations across sports and lifestyle events in South Florida."</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c10-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Coca-Cola Beverages Florida employees: <a href="https://www.linkedin.com/company/coca-cola-beverages-florida/people/" target="_blank">Coke Florida on LinkedIn</a></li>
+            <li>People with "Field Marketing" or "Marketing Specialist" titles at Coke Florida — this role is a direct pipeline from an entry-level hire 1–2 years ago.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c10-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://cokeflorida.com/" target="_blank">Coke Florida site</a>. They're the third-largest private Coca-Cola bottler in the U.S. Named Best Managed Company by Deloitte four years running. Know this.</li>
+            <li><a href="https://www.coca-colacompany.com/brands" target="_blank">Coca-Cola brand portfolio</a>. The role mentions "600+ products" — you should know the major brands (Coke, Sprite, Fanta, BODYARMOR, Monster, Simply, Dasani, Topo Chico).</li>
+            <li><a href="https://www.adweek.com/tag/coca-cola/" target="_blank">Adweek — Coca-Cola coverage</a>.</li>
+            <li>Watch for Coke activations at Miami Heat, Miami Dolphins, Inter Miami games — understand what their field marketing looks like live.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c10-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A brand-loyal athlete and communications senior who understands what makes a customer experience feel energized — ready to execute that at scale for the best-known brand in the world."</strong></p>
+          <p>Coca-Cola hires for brand love. Let it show.</p>
+        </div>
+
+        <div class="tab-content" id="c10-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>Bring an event activation idea. Pick a real upcoming South Florida event (Art Basel, Miami Open, a major concert) and describe a Coke activation concept.</li>
+            <li>"How do you measure if an event was successful?" → Talk about impressions, samples distributed, social engagement, brand lift, sales correlation.</li>
+            <li>"Tell me about a brand you love." → Obvious answer isn't Coke (they'll expect that). Pick something else and show you think like a marketer.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>What You Will Do</h5>
+      <p>The Commercial Marketing Specialist is responsible for assisting in the planning and execution support for National (Goat) brand marketing programs, all special events, and commercial operations activities on behalf of Coca-Cola Florida within the designated market. This role will support the Field Sales Operations team ensuring brand visibility, driving consumer engagement, and achieving sales objectives through effective local activation, partnerships, shopper, and general marketing initiatives.</p>
+      <p>Working as a strategic resource to help steward execution in the designated market, this role will navigate and manage commercial activation and external resources (agencies, sampling agencies, brand teams) to bring events/activations to life, and assess the value-add each event brings to the business.</p>
+      <h5>Strategy &amp; Planning</h5>
+      <ul>
+        <li>Support implementation of regional marketing strategy and annual plans aligned with national marketing goals and sales targets</li>
+        <li>Support with region special projects integrating national guidelines, insights from field teams, survey evaluations, customers, and competitive strategic action plans</li>
+        <li>Support KPI trackers and execution for all field marketing activities — scorecard, program modeling analysis, post-performance analysis</li>
+        <li>Support pre-event planning meeting and post-event debrief, evaluating successes and opportunities</li>
+        <li>Lead and contribute to local customer meetings from a marketing perspective, working with DSMs and SAMs</li>
+        <li>Support the creative development process by collaborating with internal and external agencies, overseeing POS orders, and managing regional activation element purchases</li>
+        <li>Lead end-to-end PO and payment processing through the Ariba system</li>
+        <li>Support budget management, ensuring accurate invoice tracking and zero overspend through regular monthly reviews</li>
+      </ul>
+      <h5>Execution &amp; Activation</h5>
+      <ul>
+        <li>Support planning and execution of all field marketing programs assigned to the designated market</li>
+        <li><strong>Main priority (50%):</strong> National Events hosted in Coke Florida territory</li>
+        <li><strong>Regional Events (40%):</strong> Local events and consumer engagement (Retail experiential team)</li>
+        <li><strong>Special activation/events (10%):</strong> Internal Special Events (Year-end Meeting, Leadership Summit, meeting space and hotel nights)</li>
+      </ul>
+      <h5>Requirements</h5>
+      <ul>
+        <li>1–3 years of experience in project management, marketing, retail, event management, or equivalent work experience</li>
+        <li>Analytical basic skills with ability to interpret data and make data-driven decisions</li>
+        <li>Basic customer marketing and promotions experience</li>
+        <li>Microsoft Office experience required</li>
+      </ul>
+      <p><strong>Schedule:</strong> Monday–Friday with occasional nights and weekends. Location flexibility: Tampa, Hollywood, Orlando, or Jacksonville.</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Coca-Cola Beverages Florida (Coke Florida) is a family-owned independent Coca-Cola bottler operating across the state of Florida.</p>
+      <ul>
+        <li>Third-largest privately-held and sixth-largest independent Coca-Cola bottler in the United States.</li>
+        <li>Sells, markets, manufactures, and distributes over 600 products of The Coca-Cola Company and partner companies, including Monster Beverage Corporation and BODYARMOR.</li>
+        <li>Named one of the US Best Managed Companies by Deloitte Private and The Wall Street Journal for four consecutive years (through 2025, per their posting).</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://cokeflorida.com/newsroom/" target="_blank">Coke Florida Newsroom (official)</a><span class="note">Company press releases and announcements</span></li>
+        <li><a href="https://news.google.com/search?q=%22Coca-Cola+Beverages+Florida%22" target="_blank">Google News — Coca-Cola Beverages Florida</a><span class="note">Current coverage</span></li>
+        <li><a href="https://www.adweek.com/?s=coca-cola" target="_blank">Adweek — Coca-Cola coverage</a><span class="note">Industry and marketing press on Coca-Cola globally</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.indeed.com/viewjob?jk=8ee59d138205aaee" target="_blank">Apply on Indeed →</a>
+    <a class="btn btn-secondary" href="https://cokeflorida.com/" target="_blank">Coke Florida site</a>
+  </div>
+</div>
+
+<!-- CARD 11: Miami Association of Realtors -->
+<div class="card" id="miami-realtors">
+  <div class="card-header stretch">
+    <span class="fit-badge">Stretch · Miami</span>
+    <button class="fav-btn" data-fav="miami-realtors" onclick="toggleFav('miami-realtors', this)" aria-label="Favorite">★</button>
+    <h2>Social Media Specialist</h2>
+    <div class="company">Miami Association of Realtors</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miami, FL</strong></div>
+    <div class="meta-item">💰 <strong>$55,000–$65,000</strong></div>
+    <div class="meta-item">🎓 Relevant major preferred</div>
+    <div class="meta-item">⏳ 2+ yrs experience (stretch)</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Content calendar ownership, brand voice, community engagement</strong> — fits a digital-native communications senior.</li>
+        <li><strong>Recognized as a top workplace in Miami</strong>. Good first career step.</li>
+        <li><strong>60,000+ member organization</strong> — scale of audience will teach you production discipline.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (3)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Portfolio required.</strong> Same portfolio need as other content roles. Build one 1-page Notion portfolio with 3–5 content pieces — shared across applications.</li>
+        <li><strong>2+ years of professional social media experience preferred.</strong> You're stretching. Make it honest: "Managed content for FAU Lacrosse and Team Israel Lacrosse social presences since 2022."</li>
+        <li><strong>Bilingual preferred (English/Spanish).</strong> Miami real estate is heavily Spanish-speaking. Your limited Spanish is a challenge — be honest.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c11','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c11','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c11','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c11','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c11','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c11-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Portfolio is table stakes. Build it this week using <a href="https://www.notion.com/templates/category/portfolio" target="_blank">Notion portfolio templates</a>.</li>
+            <li>Include 3–5 pieces: a Reel, a carousel, a static graphic, a caption set, a one-screen content calendar sample.</li>
+            <li>Rewrite Team Israel role: "Produce and distribute multi-channel content (Instagram, TikTok, web) supporting community outreach and fundraising for international sports organization."</li>
+            <li>Add to skills: <em>Content calendar management, community engagement, brand voice, Canva, CapCut</em>.</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c11-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Miami Association of Realtors employees: <a href="https://www.linkedin.com/company/miamirealtors/people/" target="_blank">MIAMI Realtors on LinkedIn</a></li>
+            <li>Social media specialists at Miami trade associations and real estate brokerages — lateral industry.</li>
+            <li>Follow MIAMI Realtors on Instagram and TikTok for 2 weeks before applying. Reference their recent content in your cover letter.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c11-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://www.miamirealtors.com/" target="_blank">MIAMI Association of Realtors site</a>. They're the largest local REALTOR association in the U.S.</li>
+            <li><a href="https://www.google.com/search?q=%22Miami+Realtors%22+Instagram" target="_blank">Search for MIAMI Realtors on Instagram</a> — find their active account and study the voice.</li>
+            <li><a href="https://www.google.com/search?q=%22Miami+Realtors%22+TikTok" target="_blank">Search for MIAMI Realtors on TikTok</a> — check whether they have an active presence and, if so, study it.</li>
+            <li>Know the Miami real estate market: rising inventory, insurance challenges, luxury segment strength. Subscribe to <a href="https://therealdeal.com/miami/" target="_blank">The Real Deal Miami</a> for free.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c11-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A native social media practitioner and journalism senior who has run content for two sports organizations — ready to bring that daily execution discipline to a 60,000-member association."</strong></p>
+          <p>Honesty wins here. You're not a 3-year agency vet — you're a rising generalist with a portfolio of community-driven work.</p>
+        </div>
+
+        <div class="tab-content" id="c11-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>Bring a 30-day content calendar mockup for MIAMI Realtors. They'll notice.</li>
+            <li>"How would you increase TikTok engagement for an association like ours?" → Specific answer: short-form agent tips, market data explained, behind-the-scenes of open houses.</li>
+            <li>"What would you post this week?" → Come prepared with 3 specific ideas.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Role</h5>
+      <p>MIAMI Realtors is seeking a Social Media Specialist to own the day-to-day management of the organization's social media presence across multiple platforms. This role is responsible for executing a consistent content strategy, coordinating with internal teams, and ensuring messaging is timely, accurate, and aligned with organizational priorities.</p>
+      <h5>Social Media Management</h5>
+      <ul>
+        <li>Own and manage day-to-day social media activity across all platforms</li>
+        <li>Ensure consistency in brand voice, tone, and messaging</li>
+        <li>Monitor accounts, respond to comments and inquiries, and manage public-facing interactions professionally</li>
+        <li>Identify and escalate potential reputational risks when needed</li>
+      </ul>
+      <h5>Content Development &amp; Curation</h5>
+      <ul>
+        <li>Create and publish content using existing assets, photography, and design resources</li>
+        <li>Write clear, polished, and engaging captions aligned with organizational messaging</li>
+        <li>Adapt materials for social platforms while maintaining brand standards</li>
+        <li>Highlight member achievements, programs, and organizational initiatives</li>
+      </ul>
+      <h5>Content Planning &amp; Coordination</h5>
+      <ul>
+        <li>Own and manage a structured content calendar across platforms and priorities</li>
+        <li>Coordinate with internal teams to gather information and assets</li>
+        <li>Ensure timely promotion of events, education, and key initiatives</li>
+        <li>Identify opportunities to increase engagement, including recommending paid promotion when appropriate</li>
+      </ul>
+      <h5>Knowledge and Skills Required</h5>
+      <ul>
+        <li>Social media management and digital communication expertise across multiple platforms</li>
+        <li>Strong copywriting with the ability to create clear, polished, and engaging messaging</li>
+        <li>Ability to manage multiple priorities and execute in a fast-paced environment</li>
+        <li>Proficiency with content creation tools such as Canva, Adobe Creative Suite, or similar</li>
+        <li>Familiarity with video editing tools such as CapCut preferred</li>
+        <li>Bilingual (English/Spanish) preferred</li>
+        <li>Ability to use AI as a tool, not a dependency</li>
+      </ul>
+      <h5>Compensation</h5>
+      <p>$55,000 – $65,000 annually, depending on experience. Medical insurance, dental savings plan, and 401(k) with matching included.</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>MIAMI Association of Realtors is a local REALTOR association serving over 60,000 members (per their posting).</p>
+      <ul>
+        <li>Recognized as the #1 workplace in Miami-Dade County and a Top Workplace in South Florida for three consecutive years (per their posting).</li>
+        <li>Provides member services including education, advocacy, and market data for REALTORS across South Florida.</li>
+        <li>Operates active social media channels for member communication and public real estate market information.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://www.miamirealtors.com/press-releases/" target="_blank">MIAMI Realtors — Press Releases (official)</a><span class="note">Market statistics releases and member announcements</span></li>
+        <li><a href="https://news.google.com/search?q=%22Miami+Realtors%22" target="_blank">Google News — MIAMI Realtors</a><span class="note">Recent news coverage</span></li>
+        <li><a href="https://therealdeal.com/miami/" target="_blank">The Real Deal Miami</a><span class="note">Primary Miami real estate trade publication</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/social-media-specialist-at-miami-association-of-realtors-4401763525" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://www.miamirealtors.com/" target="_blank">MIAMI Realtors site</a>
+  </div>
+</div>
+
+<!-- CARD 12: Jazwares -->
+<div class="card" id="jazwares">
+  <div class="card-header stretch">
+    <span class="fit-badge">Stretch · Plantation, FL</span>
+    <button class="fav-btn" data-fav="jazwares" onclick="toggleFav('jazwares', this)" aria-label="Favorite">★</button>
+    <h2>Intern, Human Resources</h2>
+    <div class="company">Jazwares</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Plantation, FL</strong> (home)</div>
+    <div class="meta-item">💰 <strong>$20–$25/hr</strong></div>
+    <div class="meta-item">🗓️ Hybrid (Mon–Thu onsite)</div>
+    <div class="meta-item">🧸 Squishmallows, Pokémon</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Plantation office — your hometown.</strong> Zero commute.</li>
+        <li><strong>Berkshire Hathaway-owned, fast-growing toy company</strong> with globally recognized brands. Strong first-job on resume.</li>
+        <li><strong>College student with at least one year completed</strong> — you meet the eligibility.</li>
+        <li><strong>They emphasize "a love of play and toys"</strong> — your athletic and camp counselor background reads as playful and community-oriented.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>HR is not your field.</strong> You have no HR classes or experience. Address this directly in your cover letter as "exploring early career foundations in people operations."</li>
+        <li><strong>107 applicants on LinkedIn.</strong> This is competitive. You need a strong cover letter that makes the Plantation connection clear.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c12','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c12','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c12','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c12','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c12','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c12-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Lead with organizational and detail-oriented framing. Rewrite summary: "Communications senior with a strong organizational mindset and track record of supporting benefits, programs, and communications across team environments."</li>
+            <li>Camp counselor bullets: emphasize HR-adjacent language like "supported staff onboarding, facilitated communications across 20+ counselors, maintained daily participant records."</li>
+            <li>Lacrosse captain bullets: "Coordinated team communications, roster management, and scheduling across a 20+ person organization."</li>
+            <li>Add Microsoft Office and Google Workspace to skills (they list this as a plus).</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c12-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Jazwares HR team members: <a href="https://www.linkedin.com/company/jazwares/people/?keywords=HR" target="_blank">Jazwares HR on LinkedIn</a></li>
+            <li>Current or former Jazwares interns: <a href="https://www.linkedin.com/search/results/people/?keywords=Jazwares%20intern" target="_blank">LinkedIn → Jazwares interns</a></li>
+            <li>FAU alumni at Jazwares: <a href="https://www.linkedin.com/school/florida-atlantic-university/people/?keywords=Jazwares" target="_blank">FAU alumni at Jazwares</a></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c12-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://www.jazwares.com/" target="_blank">Jazwares main site</a>. Know their brand portfolio: Squishmallows, Pokémon merchandise, Hello Kitty, Star Wars, Adopt Me.</li>
+            <li>Key fact: Jazwares is a Berkshire Hathaway subsidiary. That's a massive trust signal in any future résumé screen.</li>
+            <li><a href="https://www.toynews-online.biz/" target="_blank">Toy News coverage of Jazwares</a>.</li>
+            <li><a href="https://www.shrm.org/resourcesandtools/tools-and-samples/hr-qa/pages/cms_000347.aspx" target="_blank">SHRM — What is HR?</a> If you've never studied HR, read a basic overview so you don't sound lost.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c12-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A hometown Plantation communications senior with proven organizational and communication skills — ready to learn people operations from the inside of a Berkshire Hathaway company."</strong></p>
+          <p>Lean into the location. They'll notice "Plantation" on your resume, and you should mention it in your cover letter: zero commute means zero friction, full commitment.</p>
+        </div>
+
+        <div class="tab-content" id="c12-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>"Why HR?" is the toughest question. Answer honestly: "I'm exploring where my communications and organizational strengths fit in business. HR sits at the intersection of communication, process, and people — all things I've spent four years doing in sports leadership."</li>
+            <li>"Why Jazwares?" → The brands are globally recognized and category-defining. You want to learn inside a Berkshire Hathaway company.</li>
+            <li>Have questions ready: "What does a successful intern look like at the end of this program?" and "What's the HR team focused on over the next 6 months?"</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Role</h5>
+      <p>As an HR Benefits Intern, you will gain hands-on experience in benefits administration, leave management, wellness programming, and HR operations within a global organization. You will be a valued individual contributor to the team and will work alongside the HR Benefits &amp; Wellness Manager and Director of Total Rewards to support programs and processes that serve a diverse employee population.</p>
+      <h5>What You Will Do</h5>
+      <ul>
+        <li>Assist with day-to-day administration of the benefits process, including enrollment, changes, and ongoing maintenance</li>
+        <li>Support new hire benefits onboarding and benefits orientation activities, ensuring timely and accurate benefit elections</li>
+        <li>Support leave of absence coordination and administration throughout the leave lifecycle, including documentation review and benefits continuation</li>
+        <li>Prepare, review, and organize benefits-related forms, elections, and administrative materials</li>
+        <li>Support benefits communications and materials, including drafting employee communications, articles, guides, and reference documents</li>
+        <li>Document benefits and leave processes by creating and maintaining workflows, checklists, and reference materials</li>
+        <li>Assist with basic benefits-related data entry and maintenance in HR systems</li>
+        <li>Support coordination with benefits vendors by gathering information, tracking requests, and organizing materials</li>
+        <li>Support wellness initiatives and employee engagement activities, including planning, coordination, and communications</li>
+      </ul>
+      <h5>What We Are Looking For</h5>
+      <ul>
+        <li>Currently enrolled college student who has completed at least one year of study, or a recent graduate in Human Resources, Business, or a related field</li>
+        <li>Demonstrated interest in Human Resources — benefits administration, leave management, process documentation, or employee communications</li>
+        <li>Strong attention to detail, with a desire to learn and grow</li>
+        <li>Excellent interpersonal and communication skills</li>
+        <li>Ability to adapt to a fast-paced, dynamic environment</li>
+        <li>Proven time management, organizational, and prioritization skills</li>
+        <li>Proficiency in Microsoft Office or Google Workspace is a plus</li>
+        <li>A love of play and toys</li>
+      </ul>
+      <h5>Program Details</h5>
+      <ul>
+        <li>Paid internship ranging from $20.00–$25.00 per hour, based on education level</li>
+        <li>Hybrid schedule: Onsite Monday–Thursday, remote on Fridays. 40 hours per week.</li>
+        <li>Must commit to an extended internship program</li>
+        <li>Must be authorized to work in the United States without sponsorship</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Jazwares is a global toy manufacturer headquartered in Sunrise, Florida, with offices worldwide and products sold in over 100 countries.</p>
+      <ul>
+        <li>Subsidiary of Berkshire Hathaway.</li>
+        <li>Robust portfolio of owned and licensed brands including Squishmallows, Pokémon, Hello Kitty, Star Wars, Disney, BumBumz, and Adopt Me.</li>
+        <li>Offerings include toys, virtual games, costumes, and pet products.</li>
+        <li>The HR Intern role is based at Jazwares' office, located in Plantation, FL per the LinkedIn posting.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://www.jazwares.com/news" target="_blank">Jazwares News (official)</a><span class="note">Product launches, partnerships, and company milestones</span></li>
+        <li><a href="https://news.google.com/search?q=%22Jazwares%22" target="_blank">Google News — Jazwares</a><span class="note">Current coverage in toy industry press</span></li>
+        <li><a href="https://www.google.com/search?q=%22Squishmallows%22+news" target="_blank">Google News — Squishmallows</a><span class="note">Their flagship brand — massive cultural momentum</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.linkedin.com/jobs/view/4389414385" target="_blank">Apply on LinkedIn →</a>
+    <a class="btn btn-secondary" href="https://www.jazwares.com/" target="_blank">Jazwares site</a>
+  </div>
+</div>
+
+<!-- CARD 13: BestLogic -->
+<div class="card" id="bestlogic">
+  <div class="card-header stretch">
+    <span class="fit-badge">Stretch · Remote · Unpaid</span>
+    <button class="fav-btn" data-fav="bestlogic" onclick="toggleFav('bestlogic', this)" aria-label="Favorite">★</button>
+    <h2>Media Sales and Sponsorship Intern, Summer 2026</h2>
+    <div class="company">BestLogic Staffing (for PassionateSoccerCoach.com)</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Remote</strong></div>
+    <div class="meta-item">💰 <strong>Unpaid</strong></div>
+    <div class="meta-item">⚽ College soccer sponsorship focus</div>
+    <div class="meta-item">📅 Summer 2026</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Sports-specific internship</strong> focused on college athletics sponsorship — directly aligned with your minor.</li>
+        <li><strong>Entry-level / student-friendly.</strong> Designed for learning, not prior experience.</li>
+        <li><strong>Remote</strong> — works from Plantation, no relocation.</li>
+        <li><strong>Collegiate conferences and schools database work</strong> teaches you the industry's basic operating system.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (2)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Unpaid.</strong> Same filter as the SponsorUniversity role — only take this if it fits your financial situation and displaces lower-value activities.</li>
+        <li><strong>Staffing agency posting.</strong> Verify the end client (PassionateSoccerCoach.com) is legitimate before investing time. Their site: <a href="https://passionatesoccercoach.com/" target="_blank">PassionateSoccerCoach.com</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c13','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c13','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c13','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c13','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c13','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c13-resume">
+          <h4>Optimize your resume</h4>
+          <ol>
+            <li>Emphasize sports business association membership at FAU — this is your foot in the door language.</li>
+            <li>Add to skills: <em>Excel, PowerPoint, sponsorship research, database management, proposal drafting</em>.</li>
+            <li>List collegiate sports as a line: "Active collegiate athlete with firsthand understanding of sponsorship presence in D-I club sports."</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c13-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li><a href="https://passionatesoccercoach.com/" target="_blank">PassionateSoccerCoach.com</a> team — find their founders/staff on LinkedIn before applying.</li>
+            <li>College soccer sponsorship professionals: <a href="https://www.linkedin.com/search/results/people/?keywords=college%20soccer%20sponsorship" target="_blank">LinkedIn → college soccer sponsorship</a></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c13-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://passionatesoccercoach.com/" target="_blank">PassionateSoccerCoach.com</a>. If the site is thin or looks inactive, treat that as a red flag.</li>
+            <li><a href="https://www.ncaa.com/sports/soccer-women" target="_blank">NCAA Women's Soccer</a> and <a href="https://www.ncaa.com/sports/soccer-men" target="_blank">NCAA Men's Soccer</a> — you'll need to understand the collegiate soccer structure.</li>
+            <li><a href="https://www.unitedsoccercoaches.org/" target="_blank">United Soccer Coaches Association</a> — major governing body in college soccer coaching.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c13-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A collegiate athlete with a sports business minor and journalism background — looking to learn the college sponsorship business from the inside over one focused summer."</strong></p>
+        </div>
+
+        <div class="tab-content" id="c13-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>"What do you know about our company?" → Research PassionateSoccerCoach.com carefully. Know what they publish.</li>
+            <li>"Describe a sponsorship you admire in college sports." → Have one specific example ready.</li>
+            <li>Be ready to discuss what you'd research in week 1: conference partnerships, brand presence in NCAA tournaments, NIL implications.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Job Description</h5>
+      <p>Internship responsibilities include:</p>
+      <ul>
+        <li>Gaining knowledge and experience in soccer sponsorship within the sports landscape</li>
+        <li>Supporting sales endeavors for Sponsorship and Media Sales at PassionateSoccerCoach.com</li>
+        <li>Researching and formulating perspectives on potential business leads for the company's properties</li>
+        <li>Curating and managing databases covering collegiate conferences and schools</li>
+        <li>Assisting in crafting proposals using PowerPoint and Word</li>
+        <li>Creating sponsorship asset valuations and conducting impressions calculations</li>
+        <li>Maintaining updates on agency and brand statuses</li>
+        <li>Conducting in-depth research on special projects and prospective clients</li>
+        <li>Updating credentials and refining pitch decks for presentations</li>
+        <li>Assisting in schedule management for Managing Partners</li>
+        <li>Contributing ideas and executing potential marketing solutions for advertisers and sponsors</li>
+        <li>Overseeing client activations, providing post-analysis, and suggesting future growth strategies</li>
+      </ul>
+      <h5>Requirements</h5>
+      <ul>
+        <li>Detail-oriented with a keenness for learning and multitasking</li>
+        <li>Proficiency in Microsoft Office, particularly Excel &amp; PowerPoint, and familiarity with social media platforms</li>
+        <li>Strong written, verbal, and interpersonal communication skills</li>
+        <li>Ability to work independently while being a collaborative team player</li>
+        <li>Preferred experience in sales, marketing, media, and a demonstrated interest in college athletics</li>
+      </ul>
+      <h5>Program Details</h5>
+      <p>This is an unpaid internship. Remote. Summer 2026.</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>The internship supports the sponsorship and media sales team at PassionateSoccerCoach.com. The posting is listed under BestLogic Staffing, which is the third-party staffing agency sourcing for the role.</p>
+      <ul>
+        <li><strong>Verify the end client before investing time.</strong> The posting does not include detailed company information. Visit <a href="https://passionatesoccercoach.com/" target="_blank">PassionateSoccerCoach.com</a> to assess: Is the site actively publishing? Who are the founders? How do they make money? If you can't answer these confidently, this may not be a strong use of your summer.</li>
+        <li>The role focus is soccer sponsorship with a collegiate conference and school emphasis.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://passionatesoccercoach.com/" target="_blank">PassionateSoccerCoach.com (primary publication)</a><span class="note">Check publication frequency and content quality as a due-diligence signal</span></li>
+        <li><a href="https://news.google.com/search?q=%22PassionateSoccerCoach%22" target="_blank">Google News — PassionateSoccerCoach</a><span class="note">Verify presence in broader sports media</span></li>
+        <li><a href="https://www.ncaa.com/sports/soccer-women" target="_blank">NCAA Women's Soccer</a><span class="note">Context for the collegiate soccer sponsorship landscape</span></li>
+        <li><a href="https://www.ncaa.com/sports/soccer-men" target="_blank">NCAA Men's Soccer</a><span class="note">Context for the collegiate soccer sponsorship landscape</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.google.com/search?q=BestLogic+Staffing+Media+Sales+Sponsorship+Intern+Summer+2026" target="_blank">Find the posting →</a>
+    <a class="btn btn-secondary" href="https://passionatesoccercoach.com/" target="_blank">PassionateSoccerCoach.com</a>
+  </div>
+</div>
+
+<!-- CARD 14: Fanatics -->
+<div class="card" id="fanatics">
+  <div class="card-header stretch">
+    <span class="fit-badge">Aspirational Stretch · Miramar, FL</span>
+    <button class="fav-btn" data-fav="fanatics" onclick="toggleFav('fanatics', this)" aria-label="Favorite">★</button>
+    <h2>Athlete Relations Sr. Associate, Appearances</h2>
+    <div class="company">Fanatics Inc.</div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">📍 <strong>Miramar, FL</strong></div>
+    <div class="meta-item">💰 <strong>Not disclosed</strong></div>
+    <div class="meta-item">🎓 Bachelor's preferred</div>
+    <div class="meta-item">⏳ 3+ yrs experience (big stretch)</div>
+  </div>
+
+  <details class="section section-fit" open>
+    <summary>Why you're a good fit</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>Fanatics is a destination employer</strong> for sports industry careers, with events like Fanatics Fest and WWE Premium Live Events.</li>
+        <li><strong>Miramar, FL</strong> — 30 minutes from Plantation.</li>
+        <li><strong>Athlete and community engagement experience</strong> through Team Israel Lacrosse Ambassador role is directly relevant.</li>
+        <li><strong>Fanatics explicitly encourages applying without meeting every requirement.</strong> Quote from the posting: "If you don't meet every single requirement, that's okay — we still want to hear from you."</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-gaps">
+    <summary>Gaps to close (3)</summary>
+    <div class="section-body">
+      <ul class="bullet-list">
+        <li><strong>3+ years of athlete/talent appearances experience.</strong> You have 0. This is a significant stretch — they're likely to prioritize experienced candidates.</li>
+        <li><strong>No professional agent/athlete relationships.</strong> Senior Associate role manages a portfolio of athletes. You don't have that network yet.</li>
+        <li><strong>No contract management or P&L reporting experience.</strong> The role explicitly lists these responsibilities.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-next" open>
+    <summary>Next steps</summary>
+    <div class="section-body">
+      <div class="tabs">
+        <div class="tab-bar">
+          <button class="tab-label active" onclick="switchTab('c14','resume')">Resume</button>
+          <button class="tab-label" onclick="switchTab('c14','network')">Network</button>
+          <button class="tab-label" onclick="switchTab('c14','research')">Research</button>
+          <button class="tab-label" onclick="switchTab('c14','position')">Position</button>
+          <button class="tab-label" onclick="switchTab('c14','interview')">Interview</button>
+        </div>
+
+        <div class="tab-content active" id="c14-resume">
+          <h4>Optimize your resume</h4>
+          <p>Strategy: apply as an aspirational candidate for this role while also searching for the Fanatics Associate (non-Senior) version. Check their careers page weekly.</p>
+          <ol>
+            <li>Lead hard with Team Israel Lacrosse Ambassador: "Serve as athlete-facing representative for international sports organization, supporting domestic and international recruitment, tournament appearances, and brand-aligned community engagement."</li>
+            <li>Emphasize event execution under pressure: lacrosse championship games, multi-day tournaments, coaching relationships.</li>
+            <li>Be honest about level. In your cover letter: "I recognize this role is posted at Senior Associate level. I am also interested in any Associate-level Athlete Relations opportunities."</li>
+          </ol>
+        </div>
+
+        <div class="tab-content" id="c14-network">
+          <h4>Who to connect with</h4>
+          <ul>
+            <li>Fanatics Athlete Relations team: <a href="https://www.linkedin.com/search/results/people/?keywords=Fanatics%20Athlete%20Relations" target="_blank">LinkedIn → Fanatics Athlete Relations</a></li>
+            <li>Fanatics Miramar, FL employees: <a href="https://www.linkedin.com/search/results/people/?keywords=Fanatics%20Miramar" target="_blank">LinkedIn → Fanatics Miramar</a></li>
+            <li>Former college athletes now at Fanatics — classic pipeline.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c14-research">
+          <h4>What to read before applying</h4>
+          <ul>
+            <li><a href="https://careers.fanatics.com/" target="_blank">Fanatics careers page</a>. Check weekly for lower-level Athlete Relations openings.</li>
+            <li><a href="https://www.fanaticsfest.com/" target="_blank">Fanatics Fest</a>. Their flagship fan event. Know what it is.</li>
+            <li><a href="https://www.sportsbusinessjournal.com/search/?q=Fanatics+Fest" target="_blank">SBJ search — Fanatics Fest coverage</a>.</li>
+            <li><a href="https://www.wwe.com/shows/premium-live-events" target="_blank">WWE Premium Live Events</a>. The role mentions these directly.</li>
+            <li>Understand Fanatics' three divisions: Commerce (apparel/merchandise), Collectibles (trading cards, memorabilia), Betting &amp; Gaming. This role sits on the Commerce side.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="c14-position">
+          <h4>How to position yourself</h4>
+          <p>Your positioning line: <strong>"A communications senior and D-I collegiate team captain with athlete-facing experience through Team Israel Lacrosse — interested in any entry-level opening across Fanatics' Athlete Relations organization."</strong></p>
+          <p>Be honest about the level mismatch. Senior Associate is not a realistic direct hire from senior year, but Fanatics is worth applying to because (a) they explicitly encourage stretch applications and (b) the recruiter may route you to an Associate opening they haven't posted yet.</p>
+        </div>
+
+        <div class="tab-content" id="c14-interview">
+          <h4>Interview prep</h4>
+          <ol>
+            <li>If you get a first screen, the recruiter may already know you're a stretch. Ask directly: "Given my experience level, is there an Associate-level role that might be a better fit?" This is professional and recruiters respect it.</li>
+            <li>"Tell me about an athlete you admire and why." → Prepare for this. Pick someone with a great brand story.</li>
+            <li>"How would you handle an athlete who shows up unprepared for an appearance?" → Composure, professionalism, solve-the-problem answer.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="section section-jd">
+    <summary>Full job description</summary>
+    <div class="section-body jd-content">
+      <h5>Role Overview</h5>
+      <p>The Athlete Relations Senior Associate, Appearances is a trusted operational lead responsible for owning the end-to-end coordination of athlete public appearances, photo ops, and brand activations. This role assumes primary accountability for a defined athlete portfolio within the Appearances function, serves as the on-site operational lead during events, and actively supports Associates to ensure consistent, high-quality execution.</p>
+      <p>Senior Associates in Appearances are expected to operate independently across a wide range of event types — from premium live events and large-scale fan activations to retail partnerships and live Memorabilia Breaks — while maintaining strong relationships with athletes, agents, and internal stakeholders across the Fanatics ecosystem.</p>
+      <h5>How You Will Make an Impact</h5>
+      <ul>
+        <li>Serve as the primary operational lead on-site, managing appearance flow, athlete logistics, fan engagement, and real-time issue resolution</li>
+        <li>Lead execution of high-profile activations including WWE Premium Live Events, Fanatics Fest, hobby store events, and large brick-and-mortar retail partnerships (e.g., Dick's Sporting Goods)</li>
+        <li>Coordinate scheduling and logistics for contractual athlete live Memorabilia Breaks</li>
+        <li>Ensure 100% fulfillment of contracted appearance obligations per agreement requirements</li>
+        <li>Maintain a sub-3% contract rework/error rate</li>
+        <li>Serve as the primary relationship contact for an assigned portfolio of professional athletes and their representatives</li>
+        <li>Serve as the primary Athlete Relations point of contact for cross-functional partners</li>
+        <li>Support and guide Associates during appearance preparation and on-site execution</li>
+        <li>Track and report of P&amp;L post-event</li>
+      </ul>
+      <h5>What You Bring to the Team</h5>
+      <ul>
+        <li>3+ years of experience in athlete/talent appearances</li>
+        <li>Bachelor's Degree preferred</li>
+        <li>Strong sports industry knowledge, including familiarity with professional athlete and agent ecosystems across major leagues</li>
+        <li>Demonstrated experience managing athlete or client relationships with a high degree of professionalism</li>
+        <li>Proven ability to operate independently in fast-paced, time-sensitive, and high-visibility environments</li>
+        <li>Excellent written and verbal communication skills</li>
+        <li>High level of organization with the ability to manage multiple events and priorities simultaneously</li>
+        <li>Nights, weekends, and travel may be required</li>
+      </ul>
+      <p><strong>Physical Requirements:</strong> Must be able to lift and carry up to 25 pounds; stand 8 to 12 hours per day if attending signings or events; may walk up to several miles a day at off-site events.</p>
+      <p><strong>Fanatics explicitly encourages applications even if you don't meet every requirement:</strong> "If you don't meet every single requirement, that's okay — we still want to hear from you. We believe in the power of diverse experiences and talents."</p>
+    </div>
+  </details>
+
+  <details class="section section-company">
+    <summary>About the company</summary>
+    <div class="section-body company-content">
+      <p>Fanatics is a global digital sports platform, with business lines across commerce, collectibles, and betting &amp; gaming.</p>
+      <ul>
+        <li><strong>Fanatics Commerce</strong> is a leading designer, manufacturer, and seller of licensed fan gear, jerseys, lifestyle and streetwear products, headwear, and hardgoods. Operates <a href="https://www.fanatics.com" target="_blank">fanatics.com</a>.</li>
+        <li><strong>Fanatics Collectibles</strong> covers trading cards, sports memorabilia, and digital collectibles.</li>
+        <li><strong>Fanatics Betting &amp; Gaming</strong> operates the Fanatics Sportsbook and Casino.</li>
+        <li>Reaches a database of over 100 million global sports fans (per their posting).</li>
+        <li>Global partner network includes approximately 900 sports properties — professional leagues, players associations, teams, colleges, and retail partners — plus 2,500+ athletes and celebrities and 200+ exclusive athletes.</li>
+        <li>Over 2,000 retail locations including its Lids retail stores.</li>
+        <li>Over 22,000 employees.</li>
+        <li>This role sits within Fanatics Commerce, supporting athlete appearance operations including WWE Premium Live Events and Fanatics Fest.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="section section-news">
+    <summary>Where to read current news</summary>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><a href="https://careers.fanatics.com/" target="_blank">Fanatics Careers (official)</a><span class="note">Check weekly for Associate-level openings that may be a better level fit</span></li>
+        <li><a href="https://news.google.com/search?q=%22Fanatics%22+sports+commerce" target="_blank">Google News — Fanatics</a><span class="note">Current coverage across all Fanatics business lines</span></li>
+        <li><a href="https://www.fanaticsfest.com/" target="_blank">Fanatics Fest (official event site)</a><span class="note">Their flagship fan event — know what it is before interviewing</span></li>
+        <li><a href="https://www.sportsbusinessjournal.com/search/?q=Fanatics" target="_blank">SBJ — search Fanatics</a><span class="note">Deal and partnership coverage</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://www.indeed.com/viewjob?jk=6ab0a3e03d091a28" target="_blank">Apply on Indeed →</a>
+    <a class="btn btn-secondary" href="https://careers.fanatics.com/" target="_blank">Fanatics careers</a>
+  </div>
+</div>
+
+<div style="max-width: 860px; margin: 48px auto 0; padding: 20px; background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 6px; font-size: 13.5px; color: #78350f;">
+  <strong>Prioritization guidance:</strong> Start with the two Remote roles (Echelon, Van Wagner) and the two TelevisaUnivision internships this week. The Prep Network scout role requires one weekend of portfolio work before applying. Enterprise and the stretch roles can be layered in over the next 2 weeks. Apply to no more than 3 in a given day — quality over volume. Every application should have a tailored cover letter and a portfolio link.
+</div>
+
+<div class="empty-state" id="empty-state">
+  <h3>No starred jobs yet</h3>
+  <p>Click the ★ on any job card to add it to your favorites.</p>
+  <button class="btn-back" onclick="clearFavFilter()">← Show all 14 jobs</button>
+</div>
+
+</div>
+
+<div class="modal-overlay" id="modal" onclick="closeModalBackdrop(event)">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+    <div class="modal-header">
+      <span class="modal-label" id="modal-label"></span>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-subtitle" id="modal-subtitle"></div>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div class="kbd-hint">← → arrow keys to navigate</div>
+<div class="carousel-nav">
+  <button class="nav-arrow" onclick="prevCard()" aria-label="Previous job">‹</button>
+  <div class="card-counter">
+    <span class="counter-text" id="counter-text">1 / 14</span>
+    <span class="tier-indicator strong" id="tier-indicator">Strong Fit</span>
+  </div>
+  <button class="nav-arrow" onclick="nextCard()" aria-label="Next job">›</button>
+</div>
+
+<script>
+  /* ---------- Card Order & Tier Data ---------- */
+  var ALL_CARDS = [
+    'echelon','tu-local','tu-streaming','prep-network','enterprise','sponsor-united',
+    'van-wagner','miami-foundation','coke-florida','miami-realtors','jazwares','bestlogic','fanatics'
+  ];
+  var TIER = {
+    'echelon':'Strong Fit','tu-local':'Strong Fit','tu-streaming':'Strong Fit',
+    'prep-network':'Strong Fit','enterprise':'Strong Fit','sponsor-united':'Strong Fit',
+    'van-wagner':'Stretch','miami-foundation':'Stretch','coke-florida':'Stretch','miami-realtors':'Stretch',
+    'jazwares':'Stretch','bestlogic':'Stretch','fanatics':'Stretch'
+  };
+  /* Apply link options per card — ordered so primary apply link is first */
+  var APPLY_INFO = {
+    'echelon': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/coordinator-b2b-sponsorships-at-echelon-4402957724', primary: true }
+    ],
+    'tu-local': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/4378606148', primary: true },
+      { label: 'Company Page', url: 'https://corporate.televisaunivision.com/' }
+    ],
+    'tu-streaming': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/4378603722', primary: true },
+      { label: 'Explore ViX', url: 'https://www.vix.com/' }
+    ],
+    'prep-network': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/4402607075', primary: true },
+      { label: 'Company Site', url: 'https://prepgirlshoops.com/' }
+    ],
+    'enterprise': [
+      { label: 'Apply on LinkedIn (Brickell)', url: 'https://www.linkedin.com/jobs/view/management-trainee-at-enterprise-4378235007', primary: true },
+      { label: 'Apply on LinkedIn (SW 128th)', url: 'https://www.linkedin.com/jobs/view/4378205704' }
+    ],
+    'sponsor-united': [
+      { label: 'Find Application', url: 'https://www.google.com/search?q=SponsorUniversity+Media+Sponsorship+Scout+apply', primary: true },
+      { label: 'Company Page', url: 'https://www.sponsorunited.com/' }
+    ],
+    'van-wagner': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/4399564878', primary: true },
+      { label: 'Company Page', url: 'https://www.vanwagner.com/' }
+    ],
+    'miami-foundation': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/4378385168', primary: true },
+      { label: 'Company Page', url: 'https://miamifoundation.org/' }
+    ],
+    'coke-florida': [
+      { label: 'Apply on Indeed', url: 'https://www.indeed.com/viewjob?jk=8ee59d138205aaee', primary: true },
+      { label: 'Company Page', url: 'https://cokeflorida.com/' }
+    ],
+    'miami-realtors': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/social-media-specialist-at-miami-association-of-realtors-4401763525', primary: true },
+      { label: 'Company Page', url: 'https://www.miamirealtors.com/' }
+    ],
+    'jazwares': [
+      { label: 'Apply on LinkedIn', url: 'https://www.linkedin.com/jobs/view/4389414385', primary: true },
+      { label: 'Company Page', url: 'https://www.jazwares.com/' }
+    ],
+    'bestlogic': [
+      { label: 'Find Posting', url: 'https://www.google.com/search?q=BestLogic+Staffing+Media+Sales+Sponsorship+Intern+Summer+2026', primary: true },
+      { label: 'Publisher Site', url: 'https://passionatesoccercoach.com/' }
+    ],
+    'fanatics': [
+      { label: 'Apply on Indeed', url: 'https://www.indeed.com/viewjob?jk=6ab0a3e03d091a28', primary: true },
+      { label: 'Fanatics Careers', url: 'https://careers.fanatics.com/' }
+    ]
+  };
+
+  /* ---------- Modal popovers ---------- */
+  var MODAL_LABELS = {
+    jd: 'Full Job Description',
+    company: 'About the Company',
+    news: 'Where to Read Current News'
+  };
+  var SECTION_CLASS = {
+    jd: 'section-jd',
+    company: 'section-company',
+    news: 'section-news'
+  };
+
+  function openModal(cardId, type) {
+    var card = document.getElementById(cardId);
+    if (!card) return;
+    var section = card.querySelector('.' + SECTION_CLASS[type]);
+    if (!section) return;
+    var body = section.querySelector('.section-body');
+    var h2 = card.querySelector('.card-header h2');
+    var company = card.querySelector('.card-header .company');
+    var jobTitle = h2 ? h2.textContent.replace(/[▾▴]/g, '').trim() : '';
+    var companyName = company ? company.textContent.replace(/[▾▴]/g, '').trim() : '';
+    document.getElementById('modal-label').textContent = MODAL_LABELS[type] || '';
+    if (type === 'company') {
+      document.getElementById('modal-title').textContent = companyName;
+      document.getElementById('modal-subtitle').textContent = jobTitle;
+    } else {
+      document.getElementById('modal-title').textContent = jobTitle;
+      document.getElementById('modal-subtitle').textContent = companyName;
+    }
+    document.getElementById('modal-body').innerHTML = body ? body.innerHTML : '<p>Content not available.</p>';
+    document.getElementById('modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openModalForCurrent(type) {
+    var visible = getVisibleCardIds();
+    if (visible.length === 0) { return; }
+    openModal(visible[currentIdx], type);
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalBackdrop(e) {
+    if (e.target === e.currentTarget) closeModal();
+  }
+
+  /* ---------- Tabs ---------- */
+  function switchTab(cardId, tabName) {
+    document.querySelectorAll('#' + cardId + '-resume, #' + cardId + '-network, #' + cardId + '-research, #' + cardId + '-position, #' + cardId + '-interview').forEach(function(t) {
+      t.classList.remove('active');
+    });
+    document.getElementById(cardId + '-' + tabName).classList.add('active');
+    var card = document.getElementById(cardId + '-' + tabName).closest('.card');
+    card.querySelectorAll('.tab-label').forEach(function(l) { l.classList.remove('active'); });
+    event.currentTarget.classList.add('active');
+  }
+
+  /* ---------- Favorites (localStorage) ---------- */
+  var FAV_KEY = 'nicole-job-favorites';
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveFavs(arr) { localStorage.setItem(FAV_KEY, JSON.stringify(arr)); }
+
+  function toggleFav(cardId, btn) {
+    event.stopPropagation();
+    var favs = getFavs();
+    var idx = favs.indexOf(cardId);
+    var card = document.getElementById(cardId);
+    if (idx === -1) {
+      favs.push(cardId);
+      card.classList.add('is-favorite');
+      btn.classList.add('starred');
+    } else {
+      favs.splice(idx, 1);
+      card.classList.remove('is-favorite');
+      btn.classList.remove('starred');
+    }
+    saveFavs(favs);
+    updateFavCount();
+    if (document.body.classList.contains('show-favorites-only')) {
+      showCard(0);
+    }
+  }
+
+  function updateFavCount() {
+    var count = getFavs().length;
+    var tag = document.getElementById('favorites-tag');
+    if (tag) tag.textContent = '★ My Favorites (' + count + ')';
+  }
+
+  function toggleFavFilter() {
+    if (document.body.classList.contains('show-favorites-only')) {
+      clearFavFilter();
+      return;
+    }
+    if (getFavs().length === 0) {
+      alert("You haven't starred any jobs yet. Click the ★ on any card to add it to favorites.");
+      return;
+    }
+    document.body.classList.add('show-favorites-only');
+    document.getElementById('favorites-tag').classList.add('active');
+    showCard(0);
+  }
+
+  function clearFavFilter() {
+    document.body.classList.remove('show-favorites-only');
+    document.getElementById('favorites-tag').classList.remove('active');
+    showCard(0);
+  }
+
+  /* ---------- Carousel ---------- */
+  var currentIdx = 0;
+  var slideDirection = 'right';
+
+  function getVisibleCardIds() {
+    if (document.body.classList.contains('show-favorites-only')) {
+      var favs = getFavs();
+      return ALL_CARDS.filter(function(id) { return favs.indexOf(id) !== -1; });
+    }
+    return ALL_CARDS.slice();
+  }
+
+  function showCard(idx) {
+    var visible = getVisibleCardIds();
+    var empty = document.getElementById('empty-state');
+    document.querySelectorAll('.card').forEach(function(c) {
+      c.classList.remove('active', 'slide-from-left');
+    });
+    if (visible.length === 0) {
+      empty.classList.add('show');
+      document.getElementById('counter-text').textContent = '0 / 0';
+      document.getElementById('tier-indicator').textContent = '—';
+      document.getElementById('tier-indicator').className = 'tier-indicator';
+      return;
+    }
+    empty.classList.remove('show');
+    if (idx < 0) idx = visible.length - 1;
+    if (idx >= visible.length) idx = 0;
+    currentIdx = idx;
+    var cardId = visible[idx];
+    var card = document.getElementById(cardId);
+    if (card) {
+      card.classList.add('active');
+      if (slideDirection === 'left') card.classList.add('slide-from-left');
+    }
+    document.getElementById('counter-text').textContent = (idx + 1) + ' / ' + visible.length;
+    var tier = TIER[cardId] || '';
+    var ind = document.getElementById('tier-indicator');
+    ind.textContent = tier;
+    ind.className = 'tier-indicator ' + (tier === 'Strong Fit' ? 'strong' : 'stretch');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function nextCard() { slideDirection = 'right'; showCard(currentIdx + 1); }
+  function prevCard() { slideDirection = 'left'; showCard(currentIdx - 1); }
+
+  function jumpToCard(cardId) {
+    var visible = getVisibleCardIds();
+    var pos = visible.indexOf(cardId);
+    if (pos === -1) {
+      // Target not in current filtered view — drop filter first
+      document.body.classList.remove('show-favorites-only');
+      document.getElementById('favorites-tag').classList.remove('active');
+      visible = getVisibleCardIds();
+      pos = visible.indexOf(cardId);
+    }
+    slideDirection = pos >= currentIdx ? 'right' : 'left';
+    showCard(pos);
+  }
+
+  /* ---------- Init on load ---------- */
+  document.addEventListener('DOMContentLoaded', function() {
+    // Restore favorites
+    var favs = getFavs();
+    favs.forEach(function(id) {
+      var card = document.getElementById(id);
+      if (card) card.classList.add('is-favorite');
+      var btn = document.querySelector('[data-fav="' + id + '"]');
+      if (btn) btn.classList.add('starred');
+    });
+    updateFavCount();
+
+    // Wire up header tags to jump
+    document.querySelectorAll('.sticky-nav a.tag[href^="#"]').forEach(function(tag) {
+      tag.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = this.getAttribute('href').slice(1);
+        jumpToCard(targetId);
+      });
+    });
+
+    // Expand every collapsible section in every card on load
+    document.querySelectorAll('.card details.section').forEach(function(d) { d.open = true; });
+
+    // Build each card header — compact two-row layout
+    var LINKEDIN_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>';
+
+    document.querySelectorAll('.card').forEach(function(card) {
+      var cardId = card.id;
+      var header = card.querySelector('.card-header');
+      if (!header) return;
+
+      var fitBadge = header.querySelector('.fit-badge');
+      var star = header.querySelector('.fav-btn');
+      var h2 = header.querySelector('h2');
+      var company = header.querySelector('.company');
+
+      // Remove the legacy star button
+      if (star) star.remove();
+
+      // Apply stack — absolute-positioned, top-right of header (doesn't affect vertical flow)
+      var stack = document.createElement('div');
+      stack.className = 'apply-stack';
+      var applyList = APPLY_INFO[cardId] || [];
+      applyList.forEach(function(a) {
+        var link = document.createElement('a');
+        link.className = 'apply-tag';
+        link.href = a.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        var isLinkedIn = /linkedin\.com/i.test(a.url) || /linkedin/i.test(a.label);
+        if (isLinkedIn) {
+          link.innerHTML = LINKEDIN_SVG + '<span>' + a.label + '</span>';
+        } else {
+          link.textContent = a.label;
+        }
+        stack.appendChild(link);
+      });
+      header.appendChild(stack);
+
+      // Company row — company name + News tag stacked below it
+      if (company) {
+        var companyRow = document.createElement('div');
+        companyRow.className = 'company-row';
+        companyRow.appendChild(company);
+
+        var newsTag = document.createElement('button');
+        newsTag.className = 'card-news-tag';
+        newsTag.innerHTML = '📰 Company News';
+        newsTag.title = 'Click to see current news about this company';
+        newsTag.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openModal(cardId, 'news');
+        });
+        companyRow.appendChild(newsTag);
+
+        // Insert companyRow right after the h2 (so: fit-badge, h2, companyRow)
+        if (h2 && h2.parentNode) {
+          h2.parentNode.insertBefore(companyRow, h2.nextSibling);
+        }
+      }
+
+      // Wire clickable title → opens Full Job Description modal
+      if (h2) {
+        h2.style.cursor = 'pointer';
+        h2.title = 'Click to see full job description';
+        h2.addEventListener('click', function() { openModal(cardId, 'jd'); });
+      }
+      // Wire clickable company → opens Company Info modal
+      if (company) {
+        company.style.cursor = 'pointer';
+        company.title = 'Click to see company info';
+        company.addEventListener('click', function() { openModal(cardId, 'company'); });
+      }
+    });
+
+    // Close modal on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextCard(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prevCard(); }
+    });
+
+    // Touch swipe support
+    var touchStartX = 0;
+    document.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    document.addEventListener('touchend', function(e) {
+      var dx = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(dx) < 60) return;
+      if (dx < 0) nextCard(); else prevCard();
+    }, { passive: true });
+
+    // Start
+    showCard(0);
+  });
+</script>
+
+</body>
+</html>
