@@ -1046,12 +1046,129 @@
     cursor: pointer;
     border: none;
   }
+
+  /* -------- Mobile responsive (phones, <= 640px) -------- */
+  @media (max-width: 640px) {
+    body { padding: 0 10px 96px; }
+
+    /* Sticky header: tighter padding, smaller type, hide hint and clear-filters */
+    .sticky-nav {
+      margin: 0 -10px 14px;
+      padding: 8px 10px 8px;
+    }
+    .sticky-nav-inner { padding: 0; }
+    .nav-title {
+      font-size: 15px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .nav-title small {
+      display: block;
+      margin-left: 0;
+      margin-top: 2px;
+      font-size: 11px;
+      line-height: 1.3;
+    }
+    .filter-bar { gap: 4px; }
+    .filter-divider { display: none; }
+    .filter-trigger,
+    .filter-chip {
+      font-size: 11px;
+      padding: 4px 8px;
+    }
+    .filter-chip.chip-fav,
+    .filter-chip.chip-recover { font-size: 11px; padding: 4px 8px; }
+    .filter-reset { display: none; }
+    .fav-hint { display: none; }
+
+    /* Cards: drop apply-stack from right-rail into a row under title */
+    .card-header {
+      padding: 14px 16px 14px !important;
+      padding-right: 16px !important;
+    }
+    .card-header h2 { font-size: 17px; line-height: 1.25; }
+    .card-header .company { font-size: 13px; }
+    .apply-stack {
+      position: static !important;
+      width: auto !important;
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      gap: 6px !important;
+      margin-top: 10px;
+    }
+    .apply-stack .apply-tag { font-size: 11px; padding: 5px 10px; }
+    .card-action-btn { font-size: 11px; padding: 5px 10px; }
+    .company-row { gap: 4px; }
+    .fav-btn { width: 20px; height: 20px; font-size: 10px; }
+
+    /* Meta row: tighter */
+    .meta-row { gap: 8px; padding: 10px 16px; font-size: 12px; }
+    .meta-item { font-size: 12px; }
+
+    /* Sections: compact summaries + body */
+    details.section summary { padding: 12px 16px; font-size: 14px; }
+    .section-body { padding: 14px 16px 18px; font-size: 14px; }
+    .bullet-list li { font-size: 13.5px; margin-bottom: 8px; }
+    .fit-summary { font-size: 13.5px; line-height: 1.55; margin-bottom: 12px; }
+    .tab-content .resume-lead,
+    .tab-content .tab-lead { font-size: 13px; line-height: 1.5; margin-bottom: 10px; }
+
+    /* Gap cards: less padding, smaller body text */
+    .gap-card { padding: 14px 14px; margin-bottom: 12px; }
+    .gap-card-head { gap: 10px; margin-bottom: 10px; }
+    .gap-number { width: 22px; height: 22px; font-size: 12px; }
+    .gap-title { font-size: 14px; }
+    .gap-section { margin-bottom: 10px; }
+    .gap-section-body { font-size: 13px; line-height: 1.5; }
+    .gap-action { padding: 10px 12px; }
+    .gap-action-bullet { font-size: 13px; padding: 8px 10px; }
+
+    /* ATS explainer: tighter */
+    .ats-explainer { padding: 10px 12px; font-size: 12.5px; line-height: 1.5; }
+    .ats-hint { font-size: 10px; padding: 1px 7px; margin-left: 4px; }
+    .gap-ref { font-size: 10px; padding: 1px 7px; }
+
+    /* Next Steps tabs: allow horizontal scroll, smaller text */
+    .tab-bar {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .tab-bar::-webkit-scrollbar { display: none; }
+    .tab-label { font-size: 12px; padding: 8px 10px; }
+    .tab-content h4 { font-size: 12px; }
+    .tab-content ol li, .tab-content ul li { font-size: 13px; margin-bottom: 6px; }
+
+    /* Sources footer: tighter */
+    .sources-list li { font-size: 12px; padding: 8px 10px 8px 36px; }
+    .sources-list li::before { width: 20px; height: 20px; left: 8px; top: 8px; font-size: 10px; }
+    .sources-list li .src-note { font-size: 11px; }
+
+    /* Carousel nav: smaller floating controls */
+    .carousel-nav {
+      bottom: 12px;
+      padding: 6px 10px;
+      gap: 10px;
+    }
+    .nav-arrow { width: 40px; height: 40px; font-size: 20px; }
+    .card-counter { min-width: 72px; }
+    .card-counter .counter-text { font-size: 13px; }
+    .card-counter .tier-indicator { font-size: 9px; }
+    .kbd-hint { display: none; }
+
+    /* Filter dropdown menus: push to full-width on mobile */
+    .filter-dropdown-menu {
+      min-width: 180px;
+      max-width: calc(100vw - 20px);
+    }
+  }
 </style>
 </head>
 <body>
 <div class="sticky-nav">
   <div class="sticky-nav-inner">
-    <div class="nav-title">Jobs for Nicole Buchan <small>33 curated roles · FL &amp; remote · Updated April 23, 2026 · 5:07 PM ET</small></div>
+    <div class="nav-title">Jobs for Nicole Buchan <small>33 curated roles · FL &amp; remote · Updated April 23, 2026 · 5:46 PM ET</small></div>
     <div class="filter-bar" id="filter-bar">
       <div class="filter-dropdown" data-dropdown="tier">
         <button type="button" class="filter-trigger" data-trigger="tier" onclick="toggleDropdown('tier', event)">Tier <span class="dd-caret">▾</span></button>
@@ -1123,15 +1240,15 @@
     <div class="section-body">
 
       <p class="fit-summary">
-        Enterprise Mobility runs one of the oldest, most structured college-hire pipelines in the U.S., with a public partnership through Career Athletes and active recruiting from 220+ university athletic departments.<sup><a class="cite" href="#ent-src-6">[6]</a></sup> Your 4-year FAU Women's Lacrosse captaincy plus 3+ years of customer-facing sales at Orangetheory hit both qualifying pathways the posting names: athletics/team leadership and commission-adjacent retail sales. NACE's Spring 2026 update revised Class of 2026 hiring upward from +1.6% to +5.6%, improving your market timing.<sup><a class="cite" href="#ent-src-4">[4]</a></sup> The MT program advertises a Branch Manager trajectory built on ~1-year promotion steps (MT to Management Assistant to Assistant Manager to Branch Manager), which aligns with the 18-to-24-month outlook you can defend as a new graduate.<sup><a class="cite" href="#ent-src-2">[2]</a></sup>
+        Enterprise recruits through 220+ university athletic departments via its Career Athletes partnership.<sup><a class="cite" href="#ent-src-6">[6]</a></sup> Your 4-year FAU lacrosse captaincy plus 3 years at Orangetheory hit both qualifying pathways on the posting. The published MT ladder (MT → Assistant Manager → Branch Manager, ~1 year per step) gives you a defensible 18-to-24-month trajectory.<sup><a class="cite" href="#ent-src-2">[2]</a></sup>
       </p>
 
       <ul class="bullet-list">
-        <li><strong>Enterprise publicly recruits through 220+ university athletic departments.</strong> Enterprise has a long-running partnership with Career Athletes and an internal "Student Athletes" recruiting stream.<sup><a class="cite" href="#ent-src-6">[6]</a></sup> Your 4-year FAU Women's Lacrosse captaincy and HS multi-sport captaincy fit the exact profile that pipeline was built to hire.</li>
-        <li><strong>You hit both of Enterprise's qualifying experience pathways.</strong> The job description requires "sales and customer service OR athletics/team activities OR community/social/academic organizations." Your Orangetheory sales role (Dec 2022 to present) plus your FAU lacrosse captaincy check two of the three.</li>
-        <li><strong>The MT ladder matches a defensible 18-to-24-month trajectory.</strong> Enterprise's published program is Management Trainee to Management Assistant to Assistant Manager to Branch Manager with roughly 1 year per step.<sup><a class="cite" href="#ent-src-2">[2]</a></sup> That cadence lets you position yourself to the interviewer as ready to run your own P&L within the program's published timeline, not your own invented one.</li>
-        <li><strong>Market timing is favorable for Class of 2026.</strong> NACE revised Class of 2026 hiring projections upward from +1.6% (Nov 2025) to +5.6% (Spring 2026 update).<sup><a class="cite" href="#ent-src-4">[4]</a></sup> Enterprise is one of the few employers that already hires at this volume regardless of market; a rising market just means more branches are hiring.</li>
-        <li><strong>Category wage and openings support the MT-to-branch-manager path.</strong> BLS reports General and Operations Managers (the SOC closest to Branch Manager) have a median wage of $102,950 with ~308,700 annual openings projected 2024-2034.<sup><a class="cite" href="#ent-src-1">[1]</a></sup> That is the role you are training toward through the MT program.</li>
+        <li><strong>Enterprise publicly recruits through 220+ athletic departments.</strong><sup><a class="cite" href="#ent-src-6">[6]</a></sup> Your captaincy profile is what the pipeline was built to hire.</li>
+        <li><strong>You hit 2 of 3 qualifying pathways.</strong> Orangetheory sales since Dec 2022, plus FAU lacrosse captain, covers "sales/customer service" AND "athletics/team activities" on the posting.</li>
+        <li><strong>Published ladder = 18-24 month trajectory.</strong> MT → Management Assistant → Assistant Manager → Branch Manager, ~1 year each.<sup><a class="cite" href="#ent-src-2">[2]</a></sup> Walk in with their cadence, not one you invented.</li>
+        <li><strong>Class of 2026 hiring revised up to +5.6%.</strong><sup><a class="cite" href="#ent-src-4">[4]</a></sup> Enterprise hires at volume regardless; rising market means more branches opening.</li>
+        <li><strong>Branch Manager category pays $102,950 median (BLS) with 308,700 openings projected 2024-2034.</strong><sup><a class="cite" href="#ent-src-1">[1]</a></sup> That's the role you're training toward.</li>
       </ul>
 
     </div>
@@ -1148,15 +1265,15 @@
         </div>
         <div class="gap-section">
           <div class="gap-section-label">What they're screening for</div>
-          <div class="gap-section-body">A track record of hitting or exceeding sales targets. Enterprise is a commission-culture business, they filter resumes for people who already think in numbers, renewals, and retention.</div>
+          <div class="gap-section-body">Proof you think in sales numbers. Enterprise is a commission culture.</div>
         </div>
         <div class="gap-section">
           <div class="gap-section-label">Your adjacent experience</div>
-          <div class="gap-section-body">You've been an Orangetheory Sales Associate since Dec 2022, memberships are sales, renewals are retention, class registrations are account management. Your current bullets describe the mechanics ("point of contact for member inquiries") instead of the sales outcomes you drove.</div>
+          <div class="gap-section-body">At Orangetheory since Dec 2022, memberships = sales, renewals = retention. Your bullets describe the mechanics instead of the outcomes.</div>
         </div>
         <div class="gap-section">
           <div class="gap-section-label">The reframe</div>
-          <div class="gap-section-body">You don't need Hall-of-Fame numbers, you need to show you think in numbers. Honest directional language works ("supported monthly membership targets", "managed account base of 300+ members"). Lead with outcomes, end with mechanics.</div>
+          <div class="gap-section-body">Directional language is fine ("supported monthly targets"). Lead with outcomes, end with mechanics.</div>
         </div>
         <div class="gap-action">
           <div class="gap-action-head">
@@ -1178,15 +1295,15 @@
         </div>
         <div class="gap-section">
           <div class="gap-section-label">What they're screening for</div>
-          <div class="gap-section-body">Leadership over people, managing a roster, resolving conflict, driving performance. Enterprise explicitly counts "athletics/team activities" as qualifying leadership experience, but only if you describe it in management language.</div>
+          <div class="gap-section-body">Leadership over people. Enterprise counts athletics as qualifying, but only if you describe it in management language.</div>
         </div>
         <div class="gap-section">
           <div class="gap-section-label">Your adjacent experience</div>
-          <div class="gap-section-body">Four-year starter and Senior Captain at FAU, plus HS Soccer & Lacrosse Captain. You've led ~20-player rosters through full seasons, mentored new players, and handled on-field strategy and conflict under pressure.</div>
+          <div class="gap-section-body">4-year Senior Captain at FAU plus HS Soccer & Lacrosse Captain. Led rosters, mentored players, handled conflict under pressure.</div>
         </div>
         <div class="gap-section">
           <div class="gap-section-label">The reframe</div>
-          <div class="gap-section-body">Translate athletic-speak into management vocabulary: "led a roster," "managed performance," "resolved conflict," "ran planning cycles." Same facts, different audience, the hiring manager will read this as "this person can run a branch."</div>
+          <div class="gap-section-body">Swap athletic verbs for management ones: "led a roster," "managed performance," "resolved conflict." Same facts, different audience.</div>
         </div>
         <div class="gap-action">
           <div class="gap-action-head">
@@ -1208,15 +1325,15 @@
         </div>
         <div class="gap-section">
           <div class="gap-section-label">What they're screening for</div>
-          <div class="gap-section-body">Enterprise hires across majors, the degree is a gate, not a signal. What they want in the first 5 seconds is trajectory: is this person leader-shaped and business-curious?</div>
+          <div class="gap-section-body">Trajectory in the first 5 seconds: leader-shaped and business-curious. The degree is a gate, not a signal.</div>
         </div>
         <div class="gap-section">
           <div class="gap-section-label">Your adjacent experience</div>
-          <div class="gap-section-body">Your Multimedia Journalism / Sports Minor degree pairs with active Sport Business Association membership, which is undersold on the resume as "participate in workshops." That group exists specifically to prepare students for sports-business careers.</div>
+          <div class="gap-section-body">Multimedia Journalism + Sports Minor + Sport Business Association. The SBA line is undersold as "participate in workshops."</div>
         </div>
         <div class="gap-section">
           <div class="gap-section-label">The reframe</div>
-          <div class="gap-section-body">Add a short professional-summary line that positions you as leadership-first and business-curious. Expand the Sport Business Association bullet from passive ("participate") to active engagement with business professionals.</div>
+          <div class="gap-section-body">Add a summary line that positions you as leadership-first and business-curious. Rewrite the SBA bullet from passive to active engagement.</div>
         </div>
         <div class="gap-action">
           <div class="gap-action-head">
